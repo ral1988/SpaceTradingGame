@@ -2,6 +2,9 @@
 {
     class Menu
     {
-        
+        public Menu()
+        {
+
+        }
     }
 }
