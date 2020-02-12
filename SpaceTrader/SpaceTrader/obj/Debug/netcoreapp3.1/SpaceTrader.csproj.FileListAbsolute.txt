@@ -1,0 +1,11 @@
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\obj\Debug\netcoreapp3.1\SpaceTrader.csprojAssemblyReference.cache
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\obj\Debug\netcoreapp3.1\SpaceTrader.AssemblyInfoInputs.cache
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\obj\Debug\netcoreapp3.1\SpaceTrader.AssemblyInfo.cs
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\bin\Debug\netcoreapp3.1\SpaceTrader.exe
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\bin\Debug\netcoreapp3.1\SpaceTrader.deps.json
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\bin\Debug\netcoreapp3.1\SpaceTrader.runtimeconfig.json
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\bin\Debug\netcoreapp3.1\SpaceTrader.runtimeconfig.dev.json
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\bin\Debug\netcoreapp3.1\SpaceTrader.dll
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\bin\Debug\netcoreapp3.1\SpaceTrader.pdb
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\obj\Debug\netcoreapp3.1\SpaceTrader.dll
+C:\Users\tommy\Documents\GitHub\SpaceTradingGame\SpaceTrader\SpaceTrader\obj\Debug\netcoreapp3.1\SpaceTrader.pdb

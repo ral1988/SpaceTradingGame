@@ -12,7 +12,7 @@ namespace SpaceTrader
         }
 
         
-        private void SDFormulas(double a, int b, PlanetInfo)
+        /*private void SDFormulas(double a, int b, PlanetInfo)
         {
             var basePrice = a;                    //baseprice is universal across the map based on the item type
             var localDemand = PlanetInfo.;        //planet determines the local demand
@@ -23,7 +23,7 @@ namespace SpaceTrader
             var unitsSupplied = b;                //how many the end user is requesting
 
             var price = basePrice * (localDemand + demandFactor * unitsInDemand) / (localSupply + supplyFactor * unitsSupplied);
-        }
+        }*/
 
     }
 }
