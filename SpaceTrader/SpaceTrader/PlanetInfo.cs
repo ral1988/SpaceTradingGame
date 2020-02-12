@@ -6,5 +6,9 @@ namespace SpaceTrader
 {
     class PlanetInfo
     {
+        public PlanetInfo()
+        {
+
+        }
     }
 }

@@ -6,5 +6,9 @@ namespace SpaceTrader
 {
     class SpaceShip
     {
+        public SpaceShip()
+        {
+
+        }
     }
 }
