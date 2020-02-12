@@ -6,5 +6,6 @@ namespace SpaceTrader
 {
     class PlayerAge
     {
+        
     }
 }
