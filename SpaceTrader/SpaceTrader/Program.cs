@@ -6,7 +6,7 @@ namespace SpaceTrader
     {
         static void Main(string[] args)
         {
-
+            new MapAndTravel().DisplayMap();
         }
     }
 }
