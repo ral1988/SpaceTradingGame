@@ -1,4 +1,4 @@
-# Planets and their attributes
+# Planets and Their Attributes
 
 ## Proxima Centauri B:
 
