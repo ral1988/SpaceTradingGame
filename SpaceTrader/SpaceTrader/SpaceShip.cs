@@ -8,6 +8,14 @@ namespace SpaceTrader
     {
         public SpaceShip()
         {
+            ShipStorage();
+        }
+
+        private void ShipStorage()
+        {
+            List<(double, string)> storage = new List<(double, string)>();
+
+
 
         }
     }

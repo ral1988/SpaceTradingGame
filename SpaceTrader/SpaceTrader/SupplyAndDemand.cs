@@ -6,6 +6,7 @@ namespace SpaceTrader
 {
     class SupplyAndDemand
     {
+        
 
         public SupplyAndDemand()
         {
