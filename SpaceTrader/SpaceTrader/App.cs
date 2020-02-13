@@ -25,6 +25,7 @@ namespace SpaceTrader
             new SpaceTrader.Intro();
             
             new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet);
+            
 
         }
     }

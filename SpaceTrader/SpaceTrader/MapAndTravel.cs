@@ -75,11 +75,12 @@ namespace SpaceTrader
             if (input.Key == ConsoleKey.L)
             {
                 Console.Clear();
-                DisplayPlanetMenu();
+                DisplayPlanetMenu(StarChart, ref currentPlanet);
 
             }
             else if (input.Key == ConsoleKey.G)
             {
+                Console.WriteLine();
                 Console.WriteLine("Where would you like to go?");
                 Console.WriteLine();
                 for (int i = 0; i < StarChart.Count; i++)
@@ -93,7 +94,7 @@ namespace SpaceTrader
                 // Else, loop until valid input or "cancel" from user
                 var input2 = Console.ReadKey().KeyChar;
 
-                while (char.GetNumericValue(input2) == -1)
+                while (char.GetNumericValue(input2) == -1 || char.GetNumericValue(input2) > 8)
                 {
                     Console.WriteLine("Invalid Input. Try Again.");
                     input2 = Console.ReadKey().KeyChar;
@@ -103,12 +104,15 @@ namespace SpaceTrader
                 currentPlanet = (Convert.ToInt32(planetNum) - 1);
 
                 Console.WriteLine();
-                Console.WriteLine($"You have arrived at {StarChart[currentPlanet]}");
+                Console.Clear();
+                DisplayPlanetMenu(StarChart, ref currentPlanet);
+                
             }
         }
 
-        void DisplayPlanetMenu()
+        void DisplayPlanetMenu(List<string> StarChart, ref int currentPlanet)
         {
+            Console.WriteLine($"You have arrived at {StarChart[currentPlanet]}");
             Console.WriteLine("What would you like to do?");
             Console.WriteLine();
             Console.WriteLine("1. Go Mining");
@@ -144,7 +148,8 @@ namespace SpaceTrader
             }
             else if (input.Key == ConsoleKey.D5)
             {
-
+                Console.Clear();
+                DisplayMap(StarChart, ref currentPlanet);
             }
 
         }
