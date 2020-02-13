@@ -6,28 +6,40 @@ namespace SpaceTrader
 {
     class MapCoord
     {
+       
         MapCoord()
         {
 
         }
 
-        public void planetLocations()
+        public void PlanetLocations()
         {
-            Tuple<string, double, double>[] plantLocation =
-            {new Tuple<string, double, double>("Sol", 0.0, 0.0),
-             new Tuple<string, double, double>("ProximaCentauriB", 2.646, -3.0),
-             new Tuple<string, double, double>("BarnardsStarB", 4.0, 4.472),
-             new Tuple<string, double, double>("Ross128B", 0.0, -11.0),
-             new Tuple<string, double, double>("LuytensStarB", -10.392, -6.0),
-             new Tuple<string, double, double>("Wolf1061C", 9.798, 10.0),
-             new Tuple<string, double, double>("Gliese832C", 15.0, -5.56776),
-             new Tuple<string, double, double>("HD8832G", -13.601, 16.0),
-            };
+            
         }
 
-        private void DistanceCalc(Tuple<string, double, double>{)
+        private void DistanceCalc(ref int currentPlanet)
         {
+            /*Tuple<double, double>[] plantLocation =
+            {new Tuple<double, double>(0.0, 0.0),
+             new Tuple<double, double>(2.646, -3.0),
+             new Tuple<double, double>(4.0, 4.472),
+             new Tuple<double, double>(0.0, -11.0),
+             new Tuple<double, double>(-10.392, -6.0),
+             new Tuple<double, double>(9.798, 10.0),
+             new Tuple<double, double>(15.0, -5.56776),
+             new Tuple<double, double>(-13.601, 16.0),
+            };*/
 
+            List<Location> planetLocation = new List<Location>();
+
+            (0.0, 0.0),
+            (2.646, -3.0),
+            (4.0, 4.472),
+            (0.0, -11.0),
+            (-10.392, -6.0),
+            (9.798, 10.0),
+            (15.0, -5.56776),
+            (-13.601, 16.0),
         }
     }
 }
