@@ -17,6 +17,13 @@ namespace SpaceTrader
         {
             return planetName;
         }
+
+        private void Sol()
+        {
+            var temp = 58.63m;
+            string tempatureOutside = String.Format($"The tempature on the surface is {temp}°F");
+
+        }
         private void ProximaCentauriB()
         {
 
@@ -43,6 +50,11 @@ namespace SpaceTrader
         }
         
         private void Gliese832C()
+        {
+
+        }
+
+        private void HD8832G()
         {
 
         }
