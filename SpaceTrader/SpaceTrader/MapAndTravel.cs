@@ -91,10 +91,19 @@ namespace SpaceTrader
                 // Input from user
                 // If input is an integer between 1 and StarChart.Count, set currentPlanet equal to input minus 1
                 // Else, loop until valid input or "cancel" from user
-                Console.ReadKey();
+                var input2 = Console.ReadKey().KeyChar;
 
+                while (char.GetNumericValue(input2) == -1)
+                {
+                    Console.WriteLine("Invalid Input. Try Again.");
+                    input2 = Console.ReadKey().KeyChar;
+                }
 
+                var planetNum = char.GetNumericValue(input2);
+                currentPlanet = (Convert.ToInt32(planetNum) - 1);
 
+                Console.WriteLine();
+                Console.WriteLine($"You have arrived at {StarChart[currentPlanet]}");
             }
         }
 
