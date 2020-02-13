@@ -11,14 +11,7 @@ namespace SpaceTrader
             var currentPlanet = 0;
 
             List<Planet> StarChart = new List<Planet>();
-            /*StarChart.Add("SOL");
-            StarChart.Add("PC-B");
-            StarChart.Add("BS-B");
-            StarChart.Add("ROSS-128");
-            StarChart.Add("LS-B");
-            StarChart.Add("Wolf-1061");
-            StarChart.Add("Gliese-832");
-            StarChart.Add("HR8832-G");*/
+            
             Planet SOL = new Planet
             {
                 Name = "SOL",
@@ -99,6 +92,15 @@ namespace SpaceTrader
                 }
 
             };
+            StarChart.Add(SOL);
+            StarChart.Add(PCB);
+            StarChart.Add(BSB);
+            StarChart.Add(ROSS128);
+            StarChart.Add(LSB);
+            StarChart.Add(WOLF1061);
+            StarChart.Add(GLIESE832);
+            StarChart.Add(HR8832G);
+
 
             new SpaceTrader.Menu();
 
