@@ -41,5 +41,10 @@ namespace SpaceTrader
         {
 
         }
+        
+        private void Gliese832C()
+        {
+
+        }
     }
 }
