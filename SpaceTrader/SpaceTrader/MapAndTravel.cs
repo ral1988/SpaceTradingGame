@@ -74,14 +74,59 @@ namespace SpaceTrader
 
             if (input.Key == ConsoleKey.L)
             {
-
+                Console.Clear();
+                DisplayPlanetMenu();
 
             }
             else if (input.Key == ConsoleKey.G)
             {
-
+                Console.WriteLine("Where would you like to go?");
+                Console.WriteLine();
+                Console.WriteLine();
 
             }
+        }
+
+        void DisplayPlanetMenu()
+        {
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine();
+            Console.WriteLine("1. Go Mining");
+            Console.WriteLine("2. Visit Trading Post");
+            Console.WriteLine("3. Visit Fuel Depot");
+            Console.WriteLine("4. Visit the Cantina.");
+            Console.WriteLine("5. Leave Planet.");
+            Console.WriteLine();
+            Console.WriteLine("Enter a Menu Number to Proceed.");
+            var input = Console.ReadKey();
+
+            while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3 && input.Key != ConsoleKey.D4 && input.Key != ConsoleKey.D5)
+            {
+                Console.WriteLine("Invalid input. Try Again.");
+                input = Console.ReadKey();
+            }
+
+            if (input.Key == ConsoleKey.D1)
+            {
+
+            }
+            else if (input.Key == ConsoleKey.D2)
+            {
+
+            }
+            else if (input.Key == ConsoleKey.D3)
+            {
+
+            }
+            else if (input.Key == ConsoleKey.D4)
+            {
+
+            }
+            else if (input.Key == ConsoleKey.D5)
+            {
+
+            }
+
         }
 
     }
