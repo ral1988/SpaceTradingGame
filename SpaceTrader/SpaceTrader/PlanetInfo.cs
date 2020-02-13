@@ -17,5 +17,29 @@ namespace SpaceTrader
         {
             return planetName;
         }
+        private void ProximaCentauriB()
+        {
+
+        }
+
+        private void BarnardsStarB()
+        {
+
+        }
+
+        private void Ross128B()
+        {
+
+        }
+
+        private void LuytensStarB()
+        {
+
+        }
+
+        private void Wolf1061C()
+        {
+
+        }
     }
 }
