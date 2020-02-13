@@ -6,9 +6,16 @@ namespace SpaceTrader
 {
     class PlanetInfo
     {
-        public PlanetInfo()
-        {
+        string planetName;
 
+        public PlanetInfo(string planetName)
+        {
+            this.planetName = planetName;
+        }
+
+        public string CurrentPlanet()
+        {
+            return planetName;
         }
     }
 }

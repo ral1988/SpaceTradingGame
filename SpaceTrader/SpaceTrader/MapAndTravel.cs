@@ -10,7 +10,7 @@ namespace SpaceTrader
         {
             
         }
-        public void DisplayMap()
+        public void DisplayMap(PlanetInfo planet)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588STAR CHART OF LOCAL PLANETS UNDER UNITED NATIONS OF EARTH CONTROL\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588");
@@ -59,7 +59,29 @@ namespace SpaceTrader
             Console.WriteLine($"\u2551   Player Name: ________________    Age: 18.00           $\u03B2 0,000,000              FUEL: 000/100                 CARGO: 00/20 Metric Tons                       \u2551");
             Console.ResetColor();
             Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"You are orbiting the {planet.CurrentPlanet()} system. What do you want to do?");
+            Console.WriteLine();
+            Console.WriteLine("Land: Press L");
+            Console.WriteLine("Go to another system: Press G");
+            var input = Console.ReadKey();
+            while (input.Key != ConsoleKey.L && input.Key != ConsoleKey.G)
+            {
+                Console.WriteLine("Invalid Input. Try Again.");
+                input = Console.ReadKey();
+            }
 
+            if (input.Key == ConsoleKey.L)
+            {
+
+
+            }
+            else if (input.Key == ConsoleKey.G)
+            {
+
+
+            }
         }
 
     }
