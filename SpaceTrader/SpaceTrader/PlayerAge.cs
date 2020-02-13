@@ -6,7 +6,7 @@ namespace SpaceTrader
 {
     class PlayerAge
     {
-        int startAge = 18;
+        double startAge = 18.00;
         double endOfAge = 65.00;
 
         PlayerAge()
