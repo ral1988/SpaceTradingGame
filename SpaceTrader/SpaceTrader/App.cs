@@ -8,7 +8,7 @@ namespace SpaceTrader
     {
         public void Run()
         {
-            var firstPlanet = new PlanetInfo("SOL");
+            var currentPlanet = 0;
 
             List<string> StarChart = new List<string>();
             StarChart.Add("SOL");
@@ -24,7 +24,7 @@ namespace SpaceTrader
 
             new SpaceTrader.Intro();
             
-            new SpaceTrader.MapAndTravel().DisplayMap(firstPlanet);
+            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet);
 
         }
     }

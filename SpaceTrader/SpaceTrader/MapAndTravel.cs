@@ -6,11 +6,11 @@ namespace SpaceTrader
 {
     class MapAndTravel
     {
-        public MapAndTravel() 
+        public MapAndTravel()
         {
-            
+
         }
-        public void DisplayMap(PlanetInfo planet)
+        public void DisplayMap(List<string> StarChart, ref int currentPlanet)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588STAR CHART OF LOCAL PLANETS UNDER UNITED NATIONS OF EARTH CONTROL\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588");
@@ -61,7 +61,7 @@ namespace SpaceTrader
             Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"You are orbiting the {planet.CurrentPlanet()} system. What do you want to do?");
+            Console.WriteLine($"You are orbiting the {StarChart[currentPlanet]} system. What do you want to do?");
             Console.WriteLine();
             Console.WriteLine("Land: Press L");
             Console.WriteLine("Go to another system: Press G");
@@ -82,7 +82,18 @@ namespace SpaceTrader
             {
                 Console.WriteLine("Where would you like to go?");
                 Console.WriteLine();
-                Console.WriteLine();
+                for (int i = 0; i < StarChart.Count; i++)
+                {
+
+                    Console.WriteLine($"{i + 1}. {StarChart[i]}");
+                }
+
+                // Input from user
+                // If input is an integer between 1 and StarChart.Count, set currentPlanet equal to input minus 1
+                // Else, loop until valid input or "cancel" from user
+                Console.ReadKey();
+
+
 
             }
         }
