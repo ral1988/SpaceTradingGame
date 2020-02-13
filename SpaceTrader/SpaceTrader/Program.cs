@@ -21,7 +21,7 @@ namespace Consolefullscreen
             Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
             ShowWindow(ThisConsole, MAXIMIZE);
 
-            new SpaceTrader.MapAndTravel().DisplayMap();
+            new SpaceTrader.App().Run();
 
         }
     }
