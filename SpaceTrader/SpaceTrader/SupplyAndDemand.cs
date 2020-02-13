@@ -31,6 +31,8 @@ namespace SpaceTrader
         {
             var food = 1000.00;
             var textiles = 1000.00;
+
+            
             var electronics = 2000.00;
             var betterTextiles = 2000.00;
             var spaceParts = 2000.00;
