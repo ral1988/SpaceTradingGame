@@ -11,7 +11,14 @@ namespace SpaceTrader
         public PlanetInfo(string planetName)
         {
             this.planetName = planetName;
-
+            Sol();
+            ProximaCentauriB();
+            BarnardsStarB();
+            Ross128B();
+            LuytensStarB();
+            Wolf1061C();
+            Gliese832C();
+            HD8832G();
 
             
         }

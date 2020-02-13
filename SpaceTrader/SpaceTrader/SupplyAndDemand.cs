@@ -12,11 +12,11 @@ namespace SpaceTrader
         }
 
 
-        /*private void SDFormulas(double a, string itemType)
+        private void SDFormulas(double a, string itemType)
         {
 
             var basePrice = 100;                    //baseprice is universal across the map based on the item type
-            var localDemand = PlanetInfo.;          //planet determines the local demand
+            var localDemand = PlanetInfo;          //planet determines the local demand
             var demandFactor = ;                    //ratio: planets overall demand for item / planet total
             var unitsInDemand = PlanetInfo.;        //a ratio of how much the planet you are at wants this item
             var localSupply = PlanetInfo.;          //What is in supply on the local planet
@@ -26,7 +26,7 @@ namespace SpaceTrader
             var price = basePrice * (localDemand + demandFactor * unitsInDemand) / (localSupply + supplyFactor * unitsSupplied);
 
 
-        }*/
+        }
         public void ItemsForPurchase()
         {
             var food = 1000.00;
