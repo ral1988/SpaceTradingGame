@@ -68,6 +68,7 @@ namespace SpaceTrader
             var input = Console.ReadKey();
             while (input.Key != ConsoleKey.L && input.Key != ConsoleKey.G)
             {
+                Console.WriteLine();
                 Console.WriteLine("Invalid Input. Try Again.");
                 input = Console.ReadKey();
             }
@@ -100,8 +101,31 @@ namespace SpaceTrader
                     input2 = Console.ReadKey().KeyChar;
                 }
 
-                var planetNum = char.GetNumericValue(input2);
-                currentPlanet = (Convert.ToInt32(planetNum) - 1);
+                var input3 = char.GetNumericValue(input2);
+                int nextPlanet = (Convert.ToInt32(input3) - 1);
+
+                //Math to calculate distance
+                Console.WriteLine();
+                Console.WriteLine($"Distance to planet: {TravelDistance(StarChart, ref currentPlanet, nextPlanet)} lightyears. Would you like to proceed?");
+                Console.WriteLine("Y or N?");
+                var input4 = Console.ReadKey();
+                
+                while (input4.Key != ConsoleKey.Y && input4.Key != ConsoleKey.N)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Invalid Input. Try Again.");
+                    input4 = Console.ReadKey();
+                }
+
+
+                if (input4.Key == ConsoleKey.N)
+                {
+                    Console.Clear();
+                    DisplayMap(StarChart, ref currentPlanet);
+                }
+                else
+
+                currentPlanet = nextPlanet;
 
                 Console.WriteLine();
                 Console.Clear();
@@ -126,6 +150,7 @@ namespace SpaceTrader
 
             while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3 && input.Key != ConsoleKey.D4 && input.Key != ConsoleKey.D5)
             {
+                Console.WriteLine();
                 Console.WriteLine("Invalid input. Try Again.");
                 input = Console.ReadKey();
             }
@@ -152,6 +177,19 @@ namespace SpaceTrader
                 DisplayMap(StarChart, ref currentPlanet);
             }
 
+        }
+
+        double TravelDistance(List<Planet> StarChart, ref int currentPlanet, int nextPlanet)
+        {
+            var distance = 0.0;
+            var x = StarChart[currentPlanet].Coord.x;
+            var y = StarChart[currentPlanet].Coord.y;
+
+            var x2 = StarChart[nextPlanet].Coord.x;
+            var y2 = StarChart[nextPlanet].Coord.y;
+
+            distance = Math.Sqrt(((x2 - x) * (x2 - x)) + ((y2 - y) * (y2 - y)));
+            return distance;
         }
 
     }
