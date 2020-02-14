@@ -110,7 +110,7 @@ namespace SpaceTrader
                     input2 = Console.ReadKey().KeyChar;
                 }
 
-                //gets the variables set up to 
+                //gets the variables set up to do math
                 var input3 = char.GetNumericValue(input2);
                 int nextPlanet = (Convert.ToInt32(input3) - 1);
 
@@ -120,6 +120,7 @@ namespace SpaceTrader
                 Console.WriteLine("Y or N?");
                 var input4 = Console.ReadKey();
                 
+                //input validation
                 while (input4.Key != ConsoleKey.Y && input4.Key != ConsoleKey.N)
                 {
                     Console.WriteLine();
@@ -127,14 +128,17 @@ namespace SpaceTrader
                     input4 = Console.ReadKey();
                 }
 
-
+                //menu item
                 if (input4.Key == ConsoleKey.N)
                 {
                     Console.Clear();
                     DisplayMap(StarChart, ref currentPlanet);
                 }
+
+                //if yes
                 else
 
+                //set current planet equal to the planet traveled to.
                 currentPlanet = nextPlanet;
 
                 Console.WriteLine();
@@ -146,6 +150,7 @@ namespace SpaceTrader
 
         void DisplayPlanetMenu(List<Planet> StarChart, ref int currentPlanet)
         {
+            //menu for the planet
             Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
             Console.WriteLine("What would you like to do?");
             Console.WriteLine();
@@ -158,6 +163,7 @@ namespace SpaceTrader
             Console.WriteLine("Enter a Menu Number to Proceed.");
             var input = Console.ReadKey();
 
+            //input validation
             while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3 && input.Key != ConsoleKey.D4 && input.Key != ConsoleKey.D5)
             {
                 Console.WriteLine();
@@ -165,13 +171,22 @@ namespace SpaceTrader
                 input = Console.ReadKey();
             }
 
+            //menu items
             if (input.Key == ConsoleKey.D1)
             {
+                //calls the random generator
                 Random rand = RandomGenerator.NewRand();
+
+                //runs the results method
                 OreType result = MiningResult.Results(rand);
+
+                //Passes result to mining returns
                 MiningReturns.Returns(result);
 
+                //gets the result from MiningReturns
                 int amount = MiningReturns.Returns(result);
+
+                //Displays mining result
                 Console.Clear();
                 Console.WriteLine();
                 Console.WriteLine($"You have gone mining for {0} days and retrieved {amount} tons of {result.OreName}.");
@@ -198,7 +213,7 @@ namespace SpaceTrader
 
         }
 
-        double TravelDistance(List<Planet> StarChart, ref int currentPlanet, int nextPlanet)
+        public double TravelDistance(List<Planet> StarChart, ref int currentPlanet, int nextPlanet)
         {
             var distance = 0.0;
             var x = StarChart[currentPlanet].Coord.x;
