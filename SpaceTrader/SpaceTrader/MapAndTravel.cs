@@ -191,10 +191,12 @@ namespace SpaceTrader
                 //gets the result from MiningReturns
                 int amount = MiningReturns.Returns(result);
 
+                double timeToMine = MiningTime.TimeElapsed();
+
                 //Displays mining result
                 Console.Clear();
                 Console.WriteLine();
-                Console.WriteLine($"You have gone mining for {0} days and retrieved {amount} tons of {result.OreName}.");
+                Console.WriteLine($"You have gone mining for {timeToMine} days and retrieved {amount} tons of {result.OreName}.");
                 DisplayPlanetMenu(StarChart, ref currentPlanet);
                 
             }

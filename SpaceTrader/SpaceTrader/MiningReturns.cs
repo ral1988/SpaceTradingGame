@@ -18,22 +18,22 @@ namespace SpaceTrader
             //Most common -> Least Common
             if (result.OreName == "Titanium")
             {
-                amount = rand.Next(2, 10);
+                amount = rand.Next(2, 13);
                 return amount;
             }
             else if (result.OreName == "Gold")
             {
-                amount = rand.Next(1, 8);
+                amount = rand.Next(1, 7);
                 return amount;
             }
             else if (result.OreName == "Platinum")
             {
-                amount = rand.Next(1, 8);
+                amount = rand.Next(1, 7);
                 return amount;
             }
             else if (result.OreName == "Vibranium")
             {
-                amount = rand.Next(0, 4);
+                amount = rand.Next(0, 3);
                 return amount;
             }
             else
