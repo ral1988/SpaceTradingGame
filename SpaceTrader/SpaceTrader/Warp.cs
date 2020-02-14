@@ -290,7 +290,7 @@ namespace SpaceTrader
 			}
 		}
 		*/
-		public void WarpCompute()   
+		/*public void WarpCompute()   
 		{
 			double warpInput = 5.0;
 
@@ -315,7 +315,7 @@ namespace SpaceTrader
 		
 		    
 		    
-		}
+		}*/
 
 	}
 }
