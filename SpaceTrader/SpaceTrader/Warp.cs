@@ -7,9 +7,9 @@ namespace SpaceTrader
 {
 
     class Warp
-    { /*
+	{ /* //distance TravelDistance in MapAndTravelDistance
 		var factor;
-		var speed;
+		var speed; //for now constant wrap 4 (for now) 
 		var time;
 		var distance;
 		var result;
@@ -103,7 +103,7 @@ namespace SpaceTrader
 			return result;
 		}
 
-		public double convertTime(double result)
+		public double convertTime(double result) //only care about years
 		{
 			var unitTime = "";
 			if (unitTime != "y")
@@ -284,6 +284,38 @@ namespace SpaceTrader
 				resultDistance = roundResult(resultDistance);
 				document.calculator.distance.value = resultDistance;
 			}
-	*/	
+		}
+		
+		function compute( obj )   
+{
+    var f = 0.0;
+    var p = 3.0;                         // assume classic trek
+
+    if( obj.group1[0].checked == false ) // use next generation convention
+    {
+        p = 10.0 / 3.0;
+                
+        if( obj.number.value > 9.0 )
+            var f = -0.5 * Math.log( 10 - obj.number.value ) / Math.log( 10 );
+    }
+
+    // compute some results
+    obj.result1.value = Math.pow( obj.number.value, p + f );
+    if( obj.group2[0].checked == true )
+    {
+        obj.result2.value =       4.3 / obj.result1.value;
+        obj.result3.value =  100000.0 / obj.result1.value;
+        obj.result4.value = 2000000.0 / obj.result1.value;
+        obj.result5.value = obj.distance.value / obj.result1.value;
+    }
+    else
+    {
+        obj.result2.value = 365.25 *       4.3 / obj.result1.value;
+        obj.result3.value = 365.25 *  100000.0 / obj.result1.value;
+        obj.result4.value = 365.25 * 2000000.0 / obj.result1.value;
+        obj.result5.value = 365.25 * obj.distance.value / obj.result1.value;
+    }
+}
+*/
 	}
 }
