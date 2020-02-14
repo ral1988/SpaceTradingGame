@@ -292,25 +292,24 @@ namespace SpaceTrader
 		*/
 		public void WarpCompute()   
 		{
-			double input = 5.0;
+			double warpInput = 5.0;
 
-			if (input > 9.0)
+			if (warpInput > 9.0)
 			{
-				var f = -0.5 * Math.Log(10 - input) / Math.Log(10);
+				var f = -0.5 * Math.Log(10 - warpInput) / Math.Log(10);
 			}
 
 			// compute some results
-			var result = Math.Pow(input, p + f);
-			if (obj.group2[0].checked == true )
+			var result = Math.Pow(warpInput, p + f);
+			var distance = MapAndTravel.TravelDistance
+			if (result > 0)
 		    {
-					obj.result2.value = 4.3 / obj.result1.value;
-					obj.result5.value = obj.distance.value / obj.result1.value;
+				var velocity =  distance / result;
 				}
 
 			else
 				{
-					obj.result2.value = 365.25 * 4.3 / obj.result1.value;
-					obj.result5.value = 365.25 * obj.distance.value / obj.result1.value;
+					var timeOfTravel = 365.25 * distance / result;
 				}
 				}
 		
