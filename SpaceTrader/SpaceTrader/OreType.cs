@@ -4,17 +4,15 @@ using System.Text;
 
 namespace SpaceTrader
 {
-    class Random
+    class OreType
     {
-        public Random()
+        public OreType()
         {
 
         }
 
-        private void OddsOfInspection()
-        {
-
-        }
+        public string OreName;
 
     }
+
 }

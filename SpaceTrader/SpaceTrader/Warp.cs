@@ -284,6 +284,6 @@ namespace SpaceTrader
 				resultDistance = roundResult(resultDistance);
 				document.calculator.distance.value = resultDistance;
 			}
-	*/	}
+	*/	
 	}
 }

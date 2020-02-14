@@ -105,9 +105,8 @@ namespace SpaceTrader
             new SpaceTrader.Menu();
 
             new SpaceTrader.Intro();
-            
+
             new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet);
-            
 
         }
     }
