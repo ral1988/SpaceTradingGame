@@ -16,12 +16,13 @@ namespace SpaceTrader
 
         private void EndOfCareer()
         {
-            endOfAge = 65.00;
 
             //logic for subtracting travel, action, and other event times from the age of 65. 
             //Graphical display of how much time you have left
 
 
         }
+
+
     }
 }
