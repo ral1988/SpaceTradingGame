@@ -114,9 +114,14 @@ namespace SpaceTrader
                 var input3 = char.GetNumericValue(input2);
                 int nextPlanet = (Convert.ToInt32(input3) - 1);
 
+                //WarpStuff
+                double distance = TravelDistance(StarChart, ref currentPlanet, nextPlanet);
+
+                var time = Warp.WarpCompute(distance);
+
                 //Math to calculate distance w/Display
                 Console.WriteLine();
-                Console.WriteLine($"Distance to planet: {TravelDistance(StarChart, ref currentPlanet, nextPlanet)} lightyears. Would you like to proceed?");
+                Console.WriteLine($"Distance to planet: {distance} lightyears. Time of travel to planet: {time} \nWould you like to proceed?");
                 Console.WriteLine("Y or N?");
                 var input4 = Console.ReadKey();
                 
@@ -224,7 +229,6 @@ namespace SpaceTrader
 
             distance = Math.Sqrt(((x2 - x) * (x2 - x)) + ((y2 - y) * (y2 - y)));
 
-            Warp.WarpCompute(distance);
 
 
             return distance;
