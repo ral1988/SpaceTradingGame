@@ -223,6 +223,7 @@ namespace SpaceTrader
             var y2 = StarChart[nextPlanet].Coord.y;
 
             distance = Math.Sqrt(((x2 - x) * (x2 - x)) + ((y2 - y) * (y2 - y)));
+
             return distance;
         }
 
