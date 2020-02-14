@@ -10,7 +10,7 @@ namespace SpaceTrader
 	{
 		public double f = 0.0;
 		public double p = 10.0 / 3.0;
-		
+
 		/* //distance TravelDistance in MapAndTravelDistance
 		var factor;
 		var speed = 4.0; 
@@ -290,7 +290,7 @@ namespace SpaceTrader
 			}
 		}
 		*/
-		/*public void WarpCompute()   
+		public void WarpCompute(double distance)   
 		{
 			double warpInput = 5.0;
 
@@ -301,7 +301,7 @@ namespace SpaceTrader
 
 			// compute some results
 			var result = Math.Pow(warpInput, p + f);
-			var distance = MapAndTravel.TravelDistance
+			
 			if (result > 0)
 		    {
 				var velocity =  distance / result;
@@ -311,11 +311,8 @@ namespace SpaceTrader
 				{
 					var timeOfTravel = 365.25 * distance / result;
 				}
-				}
-		
 		    
-		    
-		}*/
+		}
 
 	}
 }
