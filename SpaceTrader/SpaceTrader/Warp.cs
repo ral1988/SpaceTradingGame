@@ -7,9 +7,13 @@ namespace SpaceTrader
 {
 
     class Warp
-	{ /* //distance TravelDistance in MapAndTravelDistance
+	{
+		public double f = 0.0;
+		public double p = 10.0 / 3.0;
+		
+		/* //distance TravelDistance in MapAndTravelDistance
 		var factor;
-		var speed; //for now constant wrap 4 (for now) 
+		var speed = 4.0; 
 		var time;
 		var distance;
 		var result;
@@ -285,37 +289,34 @@ namespace SpaceTrader
 				document.calculator.distance.value = resultDistance;
 			}
 		}
+		*/
+		public void WarpCompute()   
+		{
+			double input = 5.0;
+
+			if (input > 9.0)
+			{
+				var f = -0.5 * Math.Log(10 - input) / Math.Log(10);
+			}
+
+			// compute some results
+			var result = Math.Pow(input, p + f);
+			if (obj.group2[0].checked == true )
+		    {
+					obj.result2.value = 4.3 / obj.result1.value;
+					obj.result5.value = obj.distance.value / obj.result1.value;
+				}
+
+			else
+				{
+					obj.result2.value = 365.25 * 4.3 / obj.result1.value;
+					obj.result5.value = 365.25 * obj.distance.value / obj.result1.value;
+				}
+				}
 		
-		function compute( obj )   
-{
-    var f = 0.0;
-    var p = 3.0;                         // assume classic trek
+		    
+		    
+		}
 
-    if( obj.group1[0].checked == false ) // use next generation convention
-    {
-        p = 10.0 / 3.0;
-                
-        if( obj.number.value > 9.0 )
-            var f = -0.5 * Math.log( 10 - obj.number.value ) / Math.log( 10 );
-    }
-
-    // compute some results
-    obj.result1.value = Math.pow( obj.number.value, p + f );
-    if( obj.group2[0].checked == true )
-    {
-        obj.result2.value =       4.3 / obj.result1.value;
-        obj.result3.value =  100000.0 / obj.result1.value;
-        obj.result4.value = 2000000.0 / obj.result1.value;
-        obj.result5.value = obj.distance.value / obj.result1.value;
-    }
-    else
-    {
-        obj.result2.value = 365.25 *       4.3 / obj.result1.value;
-        obj.result3.value = 365.25 *  100000.0 / obj.result1.value;
-        obj.result4.value = 365.25 * 2000000.0 / obj.result1.value;
-        obj.result5.value = 365.25 * obj.distance.value / obj.result1.value;
-    }
-}
-*/
 	}
 }
