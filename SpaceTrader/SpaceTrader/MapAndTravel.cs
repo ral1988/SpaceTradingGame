@@ -12,6 +12,7 @@ namespace SpaceTrader
         }
         public void DisplayMap(List<Planet> StarChart, ref int currentPlanet)
         {
+            // Display for the Map
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588STAR CHART OF LOCAL PLANETS UNDER UNITED NATIONS OF EARTH CONTROL\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588");
             Console.ResetColor();
@@ -61,11 +62,17 @@ namespace SpaceTrader
             Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
+
+            // Displays Current star system
             Console.WriteLine($"You are orbiting the {StarChart[currentPlanet].Name} system. What do you want to do?");
             Console.WriteLine();
+
+            //Menu Changes
             Console.WriteLine("Land: Press L");
             Console.WriteLine("Go to another system: Press G");
             var input = Console.ReadKey();
+
+            // Input validation
             while (input.Key != ConsoleKey.L && input.Key != ConsoleKey.G)
             {
                 Console.WriteLine();
@@ -73,38 +80,41 @@ namespace SpaceTrader
                 input = Console.ReadKey();
             }
 
+            //menu item
             if (input.Key == ConsoleKey.L)
             {
                 Console.Clear();
                 DisplayPlanetMenu(StarChart, ref currentPlanet);
 
             }
+
+            //menu item
             else if (input.Key == ConsoleKey.G)
             {
                 Console.WriteLine();
                 Console.WriteLine("Where would you like to go?");
                 Console.WriteLine();
+
+                //displays the list of planets
                 for (int i = 0; i < StarChart.Count; i++)
                 {
-
                     Console.WriteLine($"{i + 1}. {StarChart[i].Name}");
                 }
 
-                // Input from user
-                // If input is an integer between 1 and StarChart.Count, set currentPlanet equal to input minus 1
-                // Else, loop until valid input or "cancel" from user
                 var input2 = Console.ReadKey().KeyChar;
 
+                //input validation
                 while (char.GetNumericValue(input2) == -1 || char.GetNumericValue(input2) > 8)
                 {
                     Console.WriteLine("Invalid Input. Try Again.");
                     input2 = Console.ReadKey().KeyChar;
                 }
 
+                //gets the variables set up to 
                 var input3 = char.GetNumericValue(input2);
                 int nextPlanet = (Convert.ToInt32(input3) - 1);
 
-                //Math to calculate distance
+                //Math to calculate distance w/Display
                 Console.WriteLine();
                 Console.WriteLine($"Distance to planet: {TravelDistance(StarChart, ref currentPlanet, nextPlanet)} lightyears. Would you like to proceed?");
                 Console.WriteLine("Y or N?");
@@ -136,7 +146,7 @@ namespace SpaceTrader
 
         void DisplayPlanetMenu(List<Planet> StarChart, ref int currentPlanet)
         {
-            Console.WriteLine($"You have arrived at {StarChart[currentPlanet].Name}");
+            Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
             Console.WriteLine("What would you like to do?");
             Console.WriteLine();
             Console.WriteLine("1. Go Mining");
@@ -157,7 +167,16 @@ namespace SpaceTrader
 
             if (input.Key == ConsoleKey.D1)
             {
+                Random rand = RandomGenerator.NewRand();
+                OreType result = MiningResult.Results(rand);
+                MiningReturns.Returns(result);
 
+                int amount = MiningReturns.Returns(result);
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine($"You have gone mining for {0} days and retrieved {amount} tons of {result.OreName}.");
+                DisplayPlanetMenu(StarChart, ref currentPlanet);
+                
             }
             else if (input.Key == ConsoleKey.D2)
             {
