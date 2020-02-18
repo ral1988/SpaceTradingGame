@@ -82,7 +82,8 @@ namespace SpaceTrader
 
                 if (input.Key == ConsoleKey.D1)
                 {
-                    Console.WriteLine("What would you buy?"); //put it into a new class
+                    Console.Clear();
+                    Console.WriteLine("What do you want to buy?"); //put it into a new class
                     Console.WriteLine();
                     Console.WriteLine("1. Ore");
                     Console.WriteLine("2. Supplies");
