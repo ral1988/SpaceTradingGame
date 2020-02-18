@@ -46,6 +46,12 @@ namespace SpaceTrader
 
                 double timeToMine = MiningTime.TimeElapsed();
 
+                for (int i = 0; i <= amount; ++i)
+                {
+                    new InventorySystem().FirstAvail();
+                    new InventorySystem().AddItem(result);
+                }
+
                 //Displays mining result
                 Console.Clear();
                 Console.WriteLine();
@@ -55,7 +61,12 @@ namespace SpaceTrader
             }
             else if (input.Key == ConsoleKey.D2)
             {
-
+                Console.Clear();
+                Console.WriteLine("You are in the trading post. What would you like to do?");
+                Console.WriteLine();
+                Console.WriteLine("1. Buy Items");
+                Console.WriteLine("2. Sell Items");
+                
             }
             else if (input.Key == ConsoleKey.D3)
             {
