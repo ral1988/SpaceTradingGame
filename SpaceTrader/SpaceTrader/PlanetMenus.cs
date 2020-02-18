@@ -66,7 +66,23 @@ namespace SpaceTrader
                 Console.WriteLine();
                 Console.WriteLine("1. Buy Items");
                 Console.WriteLine("2. Sell Items");
-                
+
+                while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Invalid Input. Try Again.");
+                    input = Console.ReadKey();
+                }
+
+                if (input.Key == ConsoleKey.D1)
+                {
+
+                }
+                else
+                {
+
+                }
+
             }
             else if (input.Key == ConsoleKey.D3)
             {
