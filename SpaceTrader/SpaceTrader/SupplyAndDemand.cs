@@ -12,9 +12,8 @@ namespace SpaceTrader
         }
 
 
-        public double Selling(double demandOfPlanet, OreType Titanium, OreType Gold, OreType Platinum, TradingItems Food, TradingItems Texttiles, TradingItems Electronics, TradingItems SpareParts, TradingItems Water)
+        public double Selling(double demandOfPlanet, int amount, int basePrice)
         {
-
             var demand = demandOfPlanet;
             var marketSize = demand * 7 + basePrice;
 
