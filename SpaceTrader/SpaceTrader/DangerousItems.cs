@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SpaceTrader
 {
-    class DangerousItems
+    class DangerousItems : Item
     {
         public string DangerousItemName;
 
