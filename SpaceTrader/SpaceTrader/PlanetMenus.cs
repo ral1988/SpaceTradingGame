@@ -82,9 +82,15 @@ namespace SpaceTrader
 
                 if (input.Key == ConsoleKey.D1)
                 {
-                    SolSupply sol = new SolSupply();
-                    Console.Clear();
-                    Console.WriteLine("You can buy food");
+                    Console.WriteLine("What would you buy?"); //put it into a new class
+                    Console.WriteLine();
+                    Console.WriteLine("1. Ore");
+                    Console.WriteLine("2. Supplies");
+                    Console.WriteLine("3. Space Parts");
+                    Console.WriteLine("4. return to Buy and Sell menu.");
+                    Console.WriteLine();
+                    Console.WriteLine("Enter a Menu Number to Proceed.");
+                    SolSupply sol = new SolSupply(); //ref the planet you're on and it's supply and demand parameters/methods
                     Console.WriteLine("Amount you desire:");
                     int amount = int.Parse(Console.ReadLine());
                     var Price = sol.SolBuying(amount);
