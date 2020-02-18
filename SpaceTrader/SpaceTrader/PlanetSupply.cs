@@ -6,7 +6,10 @@ namespace SpaceTrader
 {
     class PlanetSupply
     {
-
+        public void PlanetSelection(ref int currentPlanet)
+        {
+            if (currentPlanet
+        }
         public double SolSelling(int amount)
         {
             var SupplyAndDemand = new SupplyAndDemand();

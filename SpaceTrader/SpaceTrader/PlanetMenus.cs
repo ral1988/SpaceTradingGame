@@ -68,10 +68,7 @@ namespace SpaceTrader
             else if (input.Key == ConsoleKey.D2)
             {
                 Console.Clear();
-                Console.WriteLine("You are in the trading post. What would you like to do?");
-                Console.WriteLine();
-                Console.WriteLine("1. Buy Items");
-                Console.WriteLine("2. Sell Items");
+                TradingPostMenu();
 
                 while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2)
                 {
@@ -109,30 +106,31 @@ namespace SpaceTrader
                     }
                     else if (input2.Key == ConsoleKey.D2)
                     {
-
+                        var baseprice = Food.Price;
                     }
                     else if (input2.Key == ConsoleKey.D3)
                     {
-
+                        var baseprice = Water.Price;
                     }
                     else if (input2.Key == ConsoleKey.D4)
                     {
-
+                        var baseprice = SpareParts.Price;
                     }
                     else if (input2.Key == ConsoleKey.D5)
                     {
-
+                        var baseprice = Electronics.Price;
                     }
                     else if (input2.Key == ConsoleKey.D6)
                     {
-
+                        var baseprice = PoloniumFuel.Price;
                     }
                     else
                     {
-
+                        TradingPostMenu();
                     }
+
                 }
-                
+
 
             }
             else if (input.Key == ConsoleKey.D3)
@@ -148,6 +146,14 @@ namespace SpaceTrader
                 Console.Clear();
                 new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons);
             }
+        }
+
+        private static void TradingPostMenu()
+        {
+            Console.WriteLine("You are in the trading post. What would you like to do?");
+            Console.WriteLine();
+            Console.WriteLine("1. Buy Items");
+            Console.WriteLine("2. Sell Items");
         }
     }
 }
