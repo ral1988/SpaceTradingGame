@@ -146,6 +146,10 @@ namespace SpaceTrader
                 //set current planet equal to the planet traveled to.
                 currentPlanet = nextPlanet;
 
+                //FLavor Text
+                Console.Clear();
+                Console.WriteLine();
+                FlavorText.FlavorPicker(ref currentPlanet);
                 Console.WriteLine();
                 Console.Clear();
                 PlanetMenus.Menus(StarChart, ref currentPlanet);
