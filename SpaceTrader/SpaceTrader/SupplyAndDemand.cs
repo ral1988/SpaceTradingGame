@@ -12,22 +12,22 @@ namespace SpaceTrader
         }
 
 
-        private double Selling(double demandOfPlanet, int amount)
+        public double Selling(double demandOfPlanet, int amount)
         {
             var demand = demandOfPlanet;
-            var marketSize = demand * 7;
+            var marketSize = demand * 7 + 1000;
 
             //selling
             var amountSelling = amount;
-            var price = amountSelling * demand - marketSize;
+            var price = amountSelling * demand - marketSize ;
 
             return price;
         }
 
-        private double Buying(double demandOfPlanet, int amount)
+        public double Buying(double demandOfPlanet, int amount)
         {
             var demand = demandOfPlanet;
-            var marketSize = demand * 7;
+            var marketSize = demand * 7 + 1000;
 
             var amountBuying = amount;
             var price = amountBuying * marketSize + marketSize;
