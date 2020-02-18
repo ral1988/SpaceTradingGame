@@ -10,7 +10,7 @@ namespace SpaceTrader
         {
 
         }
-        public void DisplayMap(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium)
+        public void DisplayMap(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory)
         {
             
             // Display for the Map
@@ -58,7 +58,7 @@ namespace SpaceTrader
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
             Console.WriteLine("\u2551                                                                                                                                                                \u2551");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"\u2551   Player Name: ________________    Age: 18.00           $\u03B2 0,000,000              FUEL: 000/100                 CARGO: {Items.Length}/20 Metric Tons                       \u2551");
+            Console.WriteLine($"\u2551   Player Name: ________________    Age: 18.00           $\u03B2 0,000,000              FUEL: 000/100                 CARGO: {inventory.Items.Count:D2}/20 Metric Tons                       \u2551");
             Console.ResetColor();
             Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
             Console.WriteLine();
@@ -85,7 +85,7 @@ namespace SpaceTrader
             if (input.Key == ConsoleKey.L)
             {
                 Console.Clear();
-                PlanetMenus.Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
+                PlanetMenus.Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory);
 
             }
 
@@ -138,7 +138,7 @@ namespace SpaceTrader
                 if (input4.Key == ConsoleKey.N)
                 {
                     Console.Clear();
-                    DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
+                    DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory);
                 }
 
                 //if yes
@@ -153,7 +153,7 @@ namespace SpaceTrader
                 FlavorText.FlavorPicker(ref currentPlanet);
                 Console.WriteLine();
                 Console.Clear();
-                PlanetMenus.Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
+                PlanetMenus.Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory);
                 
             }
         }

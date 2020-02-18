@@ -153,11 +153,13 @@ namespace SpaceTrader
                 IllegalItemName = "Weapons"
             };
 
+            var inventory = new InventorySystem();
+
             new SpaceTrader.Menu();
 
             new SpaceTrader.Intro();
 
-            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
+            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory);
 
         }
     }

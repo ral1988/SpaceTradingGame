@@ -8,10 +8,10 @@ namespace SpaceTrader
     class InventorySystem
     {
         // Array to store items
-        public Item[] Items;
+        public List<Item> Items = new List<Item>();
 
         // Inventory capacity is array length
-        public int Capacity { get { return (Items == null) ? 0 : Items.Length; } }
+        public int Capacity { get; set; }
 
         // Constructor
         public InventorySystem(int capacity = 20)
@@ -22,43 +22,19 @@ namespace SpaceTrader
         // Set size of inventory, retaining contents where possible
         public void SetInventorySize(int capacity)
         {
-            if (capacity <= 0)
-                Items = null;
-            else if (Items == null)
-                Items = new Item [capacity];
-            else
-                Array.Resize(ref Items, capacity);
-        }
-
-        // Get index number of first free slot in inventory
-        public int FirstAvail()
-        {
-            if (Items != null)
-            {
-                for (int i = 0; i < Items.Length; ++i)
-                {
-                    if (Items[i] == null)
-                        return i;
-                }
-            }
-            return -1;
+            Capacity = capacity;
         }
 
         // Add item to array, returning index or -1 on failure
-        public int AddItem(Item item)
+        public bool AddItem(Item item)
         {
-            if (Items != null)
+            if (Items.Count < Capacity) 
             {
-                for (int i = 0; i < Items.Length; ++i)
-                {
-                    if (Items[i] == null)
-                    {
-                        Items[i] = item;
-                        return i;
-                    }
-                }
+                Items.Add(item);
+                return true;
             }
-            return -1;
+
+            return false;
         }
     }
 }

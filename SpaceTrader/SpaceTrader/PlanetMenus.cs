@@ -6,7 +6,7 @@ namespace SpaceTrader
 {
     class PlanetMenus
     {
-        public static void Menus(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium)
+        public static void Menus(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory)
         {
             //menu for the planet
             Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
@@ -38,25 +38,31 @@ namespace SpaceTrader
                 //runs the results method
                 OreType result = MiningResult.Results(rand, Titanium, Gold, Platinum, Vibranium);
 
-                //Passes result to mining returns
-                MiningReturns.Returns(result);
-
                 //gets the result from MiningReturns
                 int amount = MiningReturns.Returns(result);
 
                 double timeToMine = MiningTime.TimeElapsed();
 
-                for (int i = 0; i <= amount; ++i)
-                {
-                    new InventorySystem().FirstAvail();
-                    new InventorySystem().AddItem(result);
-                }
 
                 //Displays mining result
                 Console.Clear();
                 Console.WriteLine();
-                Console.WriteLine($"You have gone mining for {timeToMine} days and retrieved {amount} tons of {result.OreName}.");
-                Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
+                Console.Write($"You have gone mining for {timeToMine} days and retrieved {amount} tons of {result.OreName}");
+
+                for (int i = 0; i < amount; ++i)
+                {
+                    var addedItem = inventory.AddItem(result);
+
+                    if (! addedItem)
+                    {
+                        Console.Write($", but your inventory was full, so you had to throw away {amount - i} tons");
+                        break;
+                    }
+                }
+
+                Console.WriteLine(".");
+
+                Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory);
 
             }
             else if (input.Key == ConsoleKey.D2)
@@ -95,7 +101,7 @@ namespace SpaceTrader
             else if (input.Key == ConsoleKey.D5)
             {
                 Console.Clear();
-                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
+                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory);
             }
         }
     }
