@@ -6,6 +6,10 @@ namespace SpaceTrader
 {
     class SolSupply
     {
+        private void SolSelling()
+        {
 
+        }
     }
+    
 }
