@@ -103,54 +103,71 @@ namespace SpaceTrader
 
             TradingItems Food = new TradingItems
             {
-                TradingItemName = "Food"
+                TradingItemName = "Food",
+                Price = 1000
             };
             TradingItems Textiles = new TradingItems
             {
-                TradingItemName = "Textiles"
+                TradingItemName = "Textiles",
+                Price = 1000
             };
             TradingItems Electronics = new TradingItems
             {
-                TradingItemName = "Electronics"
+                TradingItemName = "Electronics",
+                Price = 2000
             };
             TradingItems SpareParts = new TradingItems
             {
-                TradingItemName = "Spare Parts"
+                TradingItemName = "Spare Parts",
+                Price = 2000
+            };
+            TradingItems Water = new TradingItems
+            {
+                TradingItemName = "Water",
+                Price = 2000
             };
 
             OreType Titanium = new OreType
             {
-                OreName = "Titanium"
+                OreName = "Titanium",
+                Price = 3000
             };
             OreType Gold = new OreType
             {
-                OreName = "Gold"
+                OreName = "Gold",
+                Price = 4000
             };
             OreType Platinum = new OreType
             {
-                OreName = "Platinum"
+                OreName = "Platinum",
+                Price = 5000
             };
             OreType Vibranium = new OreType
             {
-                OreName = "Vibranium"
+                OreName = "Vibranium",
+                Price = 7000
             };
 
             DangerousItems CapturedHydrogen = new DangerousItems
             {
-                DangerousItemName = "Captured Hydrogen"
+                DangerousItemName = "Captured Hydrogen",
+                Price = 6000
             };
             DangerousItems PoloniumFuel = new DangerousItems
             {
-                DangerousItemName = "Polonium Fuel Rods"
+                DangerousItemName = "Polonium Fuel Rods",
+                Price = 8000
             };
 
             IllegalItems Spice = new IllegalItems
             {
-                IllegalItemName = "Spice"
+                IllegalItemName = "Spice",
+                Price = 10000
             };
             IllegalItems Weapons = new IllegalItems
             {
-                IllegalItemName = "Weapons"
+                IllegalItemName = "Weapons",
+                Price = 12000
             };
 
             var inventory = new InventorySystem();

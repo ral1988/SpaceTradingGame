@@ -13,6 +13,8 @@ namespace SpaceTrader
 
         public string OreName;
 
+        public int Price;
+
     }
 
 }
