@@ -20,16 +20,16 @@ namespace SpaceTrader
             //selling
 
 
-            return price;
+           // return price;
         }
 
-        private double Buying(double demandOfPlanet)
+        /*private double Buying(double demandOfPlanet)
         {
             var demand = demandOfPlanet;
             var marketSize = demand * 7;
 
-            return price; 
-        }
+           // return price; 
+        }*/
         public void ItemsForPurchase()
         {
             var food = 1000.00;
