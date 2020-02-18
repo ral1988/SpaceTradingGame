@@ -7,54 +7,58 @@ namespace SpaceTrader
 {
     class InventorySystem
     {
-        /*private const int MAXIMUM_SLOTS_IN_INVENTORY = 20;
+        // Array to store items
+        public Item[] Items;
 
-        public readonly List<InventoryRecord> InventoryRecords = new List<InventoryRecord>();
- 
-        public void AddItem(ObtainableItem item, int quantityToAdd)
+        // Inventory capacity is array length
+        public int Capacity { get { return (Items == null) ? 0 : Items.Length; } }
+
+        // Constructor
+        public InventorySystem(int capacity = 20)
         {
-            while (quantityToAdd > 0)
+            SetInventorySize(capacity);
+        }
+
+        // Set size of inventory, retaining contents where possible
+        public void SetInventorySize(int capacity)
+        {
+            if (capacity <= 0)
+                Items = null;
+            else if (Items == null)
+                Items = new Item [capacity];
+            else
+                Array.Resize(ref Items, capacity);
+        }
+
+        // Get index number of first free slot in inventory
+        public int FirstAvail()
+        {
+            if (Items != null)
             {
-                // If an object of this item type already exists in the inventory, and has room to stack more items,
-                // then add as many as we can to that stack.
-                if (InventoryRecords.Exists(x => (x.InventoryItem == item) && (x.Quantity < item.MaximumStackableQuantity)))
+                for (int i = 0; i < Items.Length; ++i)
                 {
-                    // Get the item we're going to add quantity to
-                    InventoryRecord inventoryRecord =
-                    InventoryRecords.First(x => (x.InventoryItem == item) && (x.Quantity < item.MaximumStackableQuantity));
-
-                    // Calculate how many more can be added to this stack
-                    int maximumQuantityYouCanAddToThisStack = (item.MaximumStackableQuantity - inventoryRecord.Quantity);
-
-                    // Add to the stack (either the full quanity, or the amount that would make it reach the stack maximum)
-                    int quantityToAddToStack = Math.Min(quantityToAdd, maximumQuantityYouCanAddToThisStack);
-
-                    inventoryRecord.AddToQuantity(quantityToAddToStack);
-
-                    // Decrease the quantityToAdd by the amount we added to the stack.
-                    // If we added the total quantityToAdd to the stack, then this value will be 0, and we'll exit the 'while' loop.
-                    quantityToAdd -= quantityToAddToStack;
+                    if (Items[i] == null)
+                        return i;
                 }
-                else
-                {
-                    // We don't already have an existing inventoryRecord for this ObtainableItem object,
-                    // so, add one to the list, if there is room.
-                    if (InventoryRecords.Count < MAXIMUM_SLOTS_IN_INVENTORY)
-                    {
-                        // Don't set the quantity value here.
-                        // The 'while' loop will take us back to the code above, which will add to the quantity.
-                        InventoryRecords.Add(new InventoryRecord(item, 0));
-                    }
-                    else
-                    {
-                        // Throw an exception, or somehow let the user know they are out of inventory space.
-                        // This exception here is just a quick example. Do something better in your code.
-                        throw new Exception("There is no more space in the inventory");
-                    }
-                }
-
             }
+            return -1;
+        }
 
-        }*/
+        // Add item to array, returning index or -1 on failure
+        public int AddItem(Item item)
+        {
+            if (Items != null)
+            {
+                for (int i = 0; i < Items.Length; ++i)
+                {
+                    if (Items[i] == null)
+                    {
+                        Items[i] = item;
+                        return i;
+                    }
+                }
+            }
+            return -1;
+        }
     }
 }

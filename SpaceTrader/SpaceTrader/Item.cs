@@ -4,15 +4,8 @@ using System.Text;
 
 namespace SpaceTrader
 {
-    class OreType : Item
+    class Item
     {
-        public OreType()
-        {
-
-        }
-
-        public string OreName;
-
+        public string ItemName;
     }
-
 }
