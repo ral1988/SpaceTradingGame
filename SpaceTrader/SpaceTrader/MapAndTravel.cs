@@ -10,7 +10,7 @@ namespace SpaceTrader
         {
 
         }
-        public void DisplayMap(List<Planet> StarChart, ref int currentPlanet)
+        public void DisplayMap(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium)
         {
             
             // Display for the Map
@@ -85,7 +85,7 @@ namespace SpaceTrader
             if (input.Key == ConsoleKey.L)
             {
                 Console.Clear();
-                PlanetMenus.Menus(StarChart, ref currentPlanet);
+                PlanetMenus.Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
 
             }
 
@@ -138,7 +138,7 @@ namespace SpaceTrader
                 if (input4.Key == ConsoleKey.N)
                 {
                     Console.Clear();
-                    DisplayMap(StarChart, ref currentPlanet);
+                    DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
                 }
 
                 //if yes
@@ -153,7 +153,7 @@ namespace SpaceTrader
                 FlavorText.FlavorPicker(ref currentPlanet);
                 Console.WriteLine();
                 Console.Clear();
-                PlanetMenus.Menus(StarChart, ref currentPlanet);
+                PlanetMenus.Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
                 
             }
         }

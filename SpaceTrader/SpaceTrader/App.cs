@@ -101,12 +101,63 @@ namespace SpaceTrader
             StarChart.Add(GLIESE832);
             StarChart.Add(HR8832G);
 
+            TradingItems Food = new TradingItems
+            {
+                TradingItemName = "Food"
+            };
+            TradingItems Textiles = new TradingItems
+            {
+                TradingItemName = "Textiles"
+            };
+            TradingItems Electronics = new TradingItems
+            {
+                TradingItemName = "Electronics"
+            };
+            TradingItems SpareParts = new TradingItems
+            {
+                TradingItemName = "Spare Parts"
+            };
+
+            OreType Titanium = new OreType
+            {
+                OreName = "Titanium"
+            };
+            OreType Gold = new OreType
+            {
+                OreName = "Gold"
+            };
+            OreType Platinum = new OreType
+            {
+                OreName = "Platinum"
+            };
+            OreType Vibranium = new OreType
+            {
+                OreName = "Vibranium"
+            };
+
+            DangerousItems CapturedHydrogen = new DangerousItems
+            {
+                DangerousItemName = "Captured Hydrogen"
+            };
+            DangerousItems PoloniumFuel = new DangerousItems
+            {
+                DangerousItemName = "Polonium Fuel Rods"
+            };
+
+            IllegalItems Spice = new IllegalItems
+            {
+                IllegalItemName = "Spice"
+            };
+            IllegalItems Weapons = new IllegalItems
+            {
+                IllegalItemName = "Weapons"
+            };
 
             new SpaceTrader.Menu();
 
             new SpaceTrader.Intro();
 
-            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet);
+            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
 
         }
     }

@@ -6,26 +6,11 @@ namespace SpaceTrader
 {
     class MiningResult
     {
-        public static OreType Results(Random rand)
+        public static OreType Results(Random rand, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium)
         {
             List<OreType> Ores = new List<OreType>();
 
-            OreType Titanium = new OreType
-            {
-                OreName = "Titanium"
-            };
-            OreType Gold = new OreType
-            {
-                OreName = "Gold"
-            };
-            OreType Platinum = new OreType
-            {
-                OreName = "Platinum"
-            };
-            OreType Vibranium = new OreType
-            {
-                OreName = "Vibranium"
-            };
+            
 
             Ores.Add(Titanium);
             Ores.Add(Gold);

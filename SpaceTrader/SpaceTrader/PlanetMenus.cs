@@ -6,7 +6,7 @@ namespace SpaceTrader
 {
     class PlanetMenus
     {
-        public static void Menus(List<Planet> StarChart, ref int currentPlanet)
+        public static void Menus(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium)
         {
             //menu for the planet
             Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
@@ -36,7 +36,7 @@ namespace SpaceTrader
                 Random rand = RandomGenerator.NewRand();
 
                 //runs the results method
-                OreType result = MiningResult.Results(rand);
+                OreType result = MiningResult.Results(rand, Titanium, Gold, Platinum, Vibranium);
 
                 //Passes result to mining returns
                 MiningReturns.Returns(result);
@@ -56,7 +56,7 @@ namespace SpaceTrader
                 Console.Clear();
                 Console.WriteLine();
                 Console.WriteLine($"You have gone mining for {timeToMine} days and retrieved {amount} tons of {result.OreName}.");
-                Menus(StarChart, ref currentPlanet);
+                Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
 
             }
             else if (input.Key == ConsoleKey.D2)
@@ -79,7 +79,7 @@ namespace SpaceTrader
             else if (input.Key == ConsoleKey.D5)
             {
                 Console.Clear();
-                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet);
+                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium);
             }
         }
     }
