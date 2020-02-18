@@ -85,13 +85,14 @@ namespace SpaceTrader
                     Console.Clear();
                     Console.WriteLine("What do you want to buy?"); //put it into a new class
                     Console.WriteLine();
-                    Console.WriteLine("1. Ore");
-                    Console.WriteLine("2. Supplies");
-                    Console.WriteLine("3. Space Parts");
-                    Console.WriteLine("4. return to Buy and Sell menu.");
+                    Console.WriteLine("1. Water");
+                    Console.WriteLine("2. Food");
+                    Console.WriteLine("3. Spare Parts");
+                    Console.WriteLine("4. Electronics");
+                    Console.WriteLine("5. return to Buy and Sell menu.");
                     Console.WriteLine();
                     Console.WriteLine("Enter a Menu Number to Proceed.");
-                    SolSupply sol = new SolSupply(); //ref the planet you're on and it's supply and demand parameters/methods
+                    PlanetSupply sol = new PlanetSupply(); //ref the planet you're on and it's supply and demand parameters/methods
                     Console.WriteLine("Amount you desire:");
                     int amount = int.Parse(Console.ReadLine());
                     var Price = sol.SolBuying(amount);
@@ -99,7 +100,7 @@ namespace SpaceTrader
                 }
                 else
                 {
-                    SolSupply sol = new SolSupply();
+                    PlanetSupply sol = new PlanetSupply();
                     Console.Clear();
                     Console.WriteLine("You can buy food");
                     Console.WriteLine("Amount you desire:");
