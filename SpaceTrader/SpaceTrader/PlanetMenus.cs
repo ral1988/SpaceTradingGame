@@ -6,7 +6,7 @@ namespace SpaceTrader
 {
     class PlanetMenus
     {
-        public static void Menus(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory)
+        public static void Menus(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons)
         {
             //menu for the planet
             Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
@@ -62,7 +62,7 @@ namespace SpaceTrader
 
                 Console.WriteLine(".");
 
-                Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory);
+                Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons);
 
             }
             else if (input.Key == ConsoleKey.D2)
@@ -85,29 +85,54 @@ namespace SpaceTrader
                     Console.Clear();
                     Console.WriteLine("What do you want to buy?"); //put it into a new class
                     Console.WriteLine();
-                    Console.WriteLine("1. Water");
+                    Console.WriteLine("1. Textiles");
                     Console.WriteLine("2. Food");
-                    Console.WriteLine("3. Spare Parts");
-                    Console.WriteLine("4. Electronics");
-                    Console.WriteLine("5. return to Buy and Sell menu.");
+                    Console.WriteLine("3. Water");
+                    Console.WriteLine("4. Spare Parts");
+                    Console.WriteLine("5. Electronics");
+                    Console.WriteLine("6. Polonium Fuel Rods");
+                    Console.WriteLine("7. Go Back");
                     Console.WriteLine();
                     Console.WriteLine("Enter a Menu Number to Proceed.");
-                    PlanetSupply sol = new PlanetSupply(); //ref the planet you're on and it's supply and demand parameters/methods
-                    Console.WriteLine("Amount you desire:");
-                    int amount = int.Parse(Console.ReadLine());
-                    var Price = sol.SolBuying(amount);
-                    Console.WriteLine($"The price for that would be {Price}");
+                    var input2 = Console.ReadKey();
+
+                    while (input2.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3 && input.Key != ConsoleKey.D4 && input.Key != ConsoleKey.D5 && input.Key != ConsoleKey.D6 && input.Key != ConsoleKey.D7)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Invalid Input. Try Again.");
+                        input2 = Console.ReadKey();
+                    }
+
+                    if (input2.Key == ConsoleKey.D1)
+                    {
+                        var baseprice = Textiles.Price;
+                    }
+                    else if (input2.Key == ConsoleKey.D2)
+                    {
+
+                    }
+                    else if (input2.Key == ConsoleKey.D3)
+                    {
+
+                    }
+                    else if (input2.Key == ConsoleKey.D4)
+                    {
+
+                    }
+                    else if (input2.Key == ConsoleKey.D5)
+                    {
+
+                    }
+                    else if (input2.Key == ConsoleKey.D6)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
                 }
-                else
-                {
-                    PlanetSupply sol = new PlanetSupply();
-                    Console.Clear();
-                    Console.WriteLine("You can buy food");
-                    Console.WriteLine("Amount you desire:");
-                    int amount = int.Parse(Console.ReadLine());
-                    var Price = sol.SolSelling(amount);
-                    Console.WriteLine($"The price for that would be {Price}");
-                }
+                
 
             }
             else if (input.Key == ConsoleKey.D3)
@@ -121,7 +146,7 @@ namespace SpaceTrader
             else if (input.Key == ConsoleKey.D5)
             {
                 Console.Clear();
-                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory);
+                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons);
             }
         }
     }
