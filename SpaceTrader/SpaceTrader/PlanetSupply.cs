@@ -7,7 +7,7 @@ namespace SpaceTrader
     class PlanetSupply
     {
 
-        public double SolSelling(int amount, OreType Titanium, OreType Gold, OreType Platinum, TradingItems Food, TradingItems Texttiles, TradingItems Electronics, TradingItems SpareParts, TradingItems Water)
+        public double SolSelling(int amount)
         {
             var SupplyAndDemand = new SupplyAndDemand();
             var demandOfPlanet = 1.25;
