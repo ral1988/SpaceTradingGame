@@ -82,11 +82,23 @@ namespace SpaceTrader
 
                 if (input.Key == ConsoleKey.D1)
                 {
-
+                    SolSupply sol = new SolSupply();
+                    Console.Clear();
+                    Console.WriteLine("You can buy food");
+                    Console.WriteLine("Amount you desire:");
+                    int amount = int.Parse(Console.ReadLine());
+                    var Price = sol.SolBuying(amount);
+                    Console.WriteLine($"The price for that would be {Price}");
                 }
                 else
                 {
-
+                    SolSupply sol = new SolSupply();
+                    Console.Clear();
+                    Console.WriteLine("You can buy food");
+                    Console.WriteLine("Amount you desire:");
+                    int amount = int.Parse(Console.ReadLine());
+                    var Price = sol.SolSelling(amount);
+                    Console.WriteLine($"The price for that would be {Price}");
                 }
 
             }
