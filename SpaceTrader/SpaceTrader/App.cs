@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace SpaceTrader
 {
     class App
@@ -13,7 +14,7 @@ namespace SpaceTrader
             double Money = 1000.0;
 
             List<Planet> StarChart = new List<Planet>();
-            
+
             Planet SOL = new Planet
             {
                 Name = "SOL",
@@ -109,6 +110,8 @@ namespace SpaceTrader
                 Price = 10
             };
 
+            Fuel.Add(100);
+
             TradingItems Food = new TradingItems
             {
                 Name = "Food",
@@ -184,7 +187,7 @@ namespace SpaceTrader
 
             new SpaceTrader.Intro();
 
-            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
+            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref Fuel.FuelTank);
 
         }
     }
