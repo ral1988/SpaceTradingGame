@@ -14,6 +14,8 @@ namespace SpaceTrader
             double Money = 1000.0;
 
             var callAge = new PlayerAge();
+            callAge.age.Add(18);
+
 
             callAge.age.Add(18);
 
