@@ -25,7 +25,6 @@ namespace SpaceTrader
 
             timeToMine *= 365.25;
 
-            addToAge.TimeCalc(timeToMine);
             
             return timeToMine;
         }
