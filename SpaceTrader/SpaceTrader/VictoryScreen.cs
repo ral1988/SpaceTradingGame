@@ -8,7 +8,7 @@ namespace SpaceTrader
     {
         public static void Victory(ref double Money)
         {
-            if (Money >= 1000000)
+            if (Money >= 100000000)
             {
                 Console.Clear();
                 Console.WriteLine();

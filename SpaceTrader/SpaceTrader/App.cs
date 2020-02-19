@@ -120,27 +120,27 @@ namespace SpaceTrader
             TradingItems Food = new TradingItems
             {
                 Name = "Food",
-                Price = 1000
+                Price = 10000
             };
             TradingItems Textiles = new TradingItems
             {
                 Name = "Textiles",
-                Price = 1000
+                Price = 10000
             };
             TradingItems Electronics = new TradingItems
             {
                 Name = "Electronics",
-                Price = 2000
+                Price = 30000
             };
             TradingItems SpareParts = new TradingItems
             {
                 Name = "Spare Parts",
-                Price = 2000
+                Price = 35000
             };
             TradingItems Water = new TradingItems
             {
                 Name = "Water",
-                Price = 2000
+                Price = 20000
             };
 
             OreType Titanium = new OreType
@@ -167,23 +167,23 @@ namespace SpaceTrader
             DangerousItems CapturedHydrogen = new DangerousItems
             {
                 Name = "Captured Hydrogen",
-                Price = 6000
+                Price = 60000
             };
             DangerousItems PoloniumFuel = new DangerousItems
             {
                 Name = "Polonium Fuel Rods",
-                Price = 8000
+                Price = 100000
             };
 
             IllegalItems Spice = new IllegalItems
             {
                 Name = "Spice",
-                Price = 10000
+                Price = 200000
             };
             IllegalItems Weapons = new IllegalItems
             {
                 Name = "Weapons",
-                Price = 12000
+                Price = 1200000
             };
 
             var inventory = new InventorySystem();
