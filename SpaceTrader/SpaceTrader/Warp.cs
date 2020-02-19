@@ -13,7 +13,7 @@ namespace SpaceTrader
 			
 			double f = 0.0;
 			double p = 10.0 / 3.0;
-			double warpInput = 4.0;
+			double warpInput = 3.0;
 
 			//if (warpInput > 9.0)
 			//{
