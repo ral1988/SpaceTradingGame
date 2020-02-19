@@ -8,7 +8,6 @@ namespace SpaceTrader
     {
         public static double TimeElapsed()
         {
-            var addToAge = new PlayerAge();
 
             double timeToMine = 0;
 
