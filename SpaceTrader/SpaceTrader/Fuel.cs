@@ -26,5 +26,10 @@ namespace SpaceTrader
         {
             FuelTank += newfuel;
         }
+
+        internal void Remove(int usedFuel)
+        {
+            FuelTank -= usedFuel / 20;
+        }
     }
 }
