@@ -188,11 +188,13 @@ namespace SpaceTrader
 
             var inventory = new InventorySystem();
 
+            var hold = new SmugglerHold();
+
             new SpaceTrader.Menu();
 
             new SpaceTrader.Intro();
 
-            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref Fuel.FuelTank, callAge.age, callAge.endOfAge);
+            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref Fuel.FuelTank, callAge.age, callAge.endOfAge, hold);
 
         }
     }

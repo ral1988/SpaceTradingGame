@@ -11,11 +11,6 @@ namespace SpaceTrader
 
         }
 
-        private void Inspection()
-        {
-
-        }
-
 
     }
 
