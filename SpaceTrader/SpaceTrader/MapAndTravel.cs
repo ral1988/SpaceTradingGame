@@ -173,7 +173,7 @@ namespace SpaceTrader
 
             distance = Math.Sqrt(((x2 - x) * (x2 - x)) + ((y2 - y) * (y2 - y)));
 
-
+         
 
             return distance;
         }
