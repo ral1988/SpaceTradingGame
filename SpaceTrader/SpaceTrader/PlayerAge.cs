@@ -7,7 +7,7 @@ namespace SpaceTrader
 {
     class PlayerAge
     {
-        public List<double> age = new List<double> { 18.00 };
+        public List<double> age = new List<double> { 18.00, };
 
         public PlayerAge()
         {
@@ -34,8 +34,6 @@ namespace SpaceTrader
             {
                 EndOfCareer();
             }
-
-            age.Sum();
         }
 
         private void EndOfCareer()

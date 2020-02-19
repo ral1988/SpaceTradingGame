@@ -10,6 +10,9 @@ namespace SpaceTrader
         {
             var currentPlanet = 0;
 
+            var callAge = new PlayerAge();
+
+
             double Money = 1000.0;
 
             List<Planet> StarChart = new List<Planet>();
@@ -184,7 +187,7 @@ namespace SpaceTrader
 
             new SpaceTrader.Intro();
 
-            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
+            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
         }
     }
