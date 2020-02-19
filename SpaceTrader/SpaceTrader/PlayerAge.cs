@@ -7,35 +7,35 @@ namespace SpaceTrader
 {
     class PlayerAge
     {
+        public List<double> age = new List<double> { 18.00 };
+
         public PlayerAge()
         {
-            
+
+
         }
 
-        public double TimeCalc(double accumlator)
+        public void TimeCalc(double accumlator)
         {
 
-            double startAge = 18.00;
             double endOfAge = 65.00;
 
-            var currentAge = new List<double>();
-
-            currentAge.Add(startAge);
+          
 
             if (accumlator > 0)
             {
-                currentAge.Add(accumlator / 365.25);
+                age.Add(accumlator / 365.25);
             }
 
 
-            double sum = currentAge.Sum();
+            double sum = age.Sum();
 
             if (sum >= endOfAge)
             {
                 EndOfCareer();
             }
 
-            return sum;
+            age.Sum();
         }
 
         private void EndOfCareer()
