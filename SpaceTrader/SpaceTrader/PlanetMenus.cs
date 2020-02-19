@@ -13,6 +13,7 @@ namespace SpaceTrader
             FailureScreen failureScreen = new FailureScreen();
 
             //menu for the planet
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
             Console.WriteLine("What would you like to do?");
             Console.WriteLine();
