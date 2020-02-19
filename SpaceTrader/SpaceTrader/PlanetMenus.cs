@@ -360,9 +360,12 @@ namespace SpaceTrader
                         // Sells all
 
                     }
-
-                    inventory.RemoveItem(output, inventory);
-
+                    else
+                    {
+                        inventory.RemoveItem(output, inventory);
+                    }
+                    Console.Clear();
+                    Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
 
                 }
 
