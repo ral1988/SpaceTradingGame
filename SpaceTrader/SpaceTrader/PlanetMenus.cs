@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace SpaceTrader
 {
@@ -54,7 +55,7 @@ namespace SpaceTrader
                 //Displays mining result
                 Console.Clear();
                 Console.WriteLine();
-                Console.Write($"You have gone mining for {timeToMine} days and retrieved {amount} tons of {result.OreName}");
+                Console.Write($"You have gone mining for {timeToMine} days and retrieved {amount} tons of {result.Name}");
 
                 for (int i = 0; i < amount; ++i)
                 {
@@ -332,6 +333,36 @@ namespace SpaceTrader
                         Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
 
                     }
+
+                }
+                else if (input.Key == ConsoleKey.D2)
+                {
+                    
+                    Console.Clear();
+                    Console.WriteLine();
+                    Console.WriteLine("What would you like to sell?");
+                    
+                    for (int i = 0; i < inventory.Items.Count; ++i)
+                    {
+                        Console.WriteLine($"{i + 1}. {(inventory.Items[i]).Name} ");
+                    }
+
+                    Console.WriteLine("Enter the desired inventory slot or enter A for ALL.");
+                    var slot = Console.ReadLine();
+
+                    int output;
+                    while (!Int32.TryParse(slot, out output) && slot != "A")
+                    {
+                        Console.WriteLine("Invalid input. Try again.");
+                    }
+                    if (slot == "A")
+                    {
+                        // Sells all
+
+                    }
+
+                    inventory.RemoveItem(output, inventory);
+
 
                 }
 

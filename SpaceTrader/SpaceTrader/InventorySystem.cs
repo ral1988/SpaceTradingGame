@@ -37,6 +37,11 @@ namespace SpaceTrader
             return false;
         }
 
+        public void RemoveItem(int output, InventorySystem inventory)
+        {
+            inventory.Items.RemoveAt(output - 1);
+        }
+
         
     }
 }

@@ -6,6 +6,6 @@ namespace SpaceTrader
 {
     class Item
     {
-        public string ItemName;
+        public string Name { get; set; }
     }
 }

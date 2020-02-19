@@ -6,7 +6,7 @@ namespace SpaceTrader
 {
     class DangerousItems : Item
     {
-        public string DangerousItemName;
+       
 
         public int Price;
     }
