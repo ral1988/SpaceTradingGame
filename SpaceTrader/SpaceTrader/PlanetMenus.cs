@@ -48,7 +48,7 @@ namespace SpaceTrader
 
                 double timeToMine = MiningTime.TimeElapsed();
 
-                addToAge.TimeCalc(timeToMine);
+                addToAge.TimeCalc(timeToMine / 365.25);
 
 
 

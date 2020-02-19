@@ -28,7 +28,7 @@ namespace SpaceTrader
 
             if (accumlator > 0)
             {
-                age.Add(accumlator / 365.25);
+                age.Add(accumlator);
             }
 
 
