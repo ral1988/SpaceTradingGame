@@ -103,6 +103,12 @@ namespace SpaceTrader
             StarChart.Add(GLIESE832);
             StarChart.Add(HR8832G);
 
+            Fuel Fuel = new Fuel
+            {
+                Name = "Fuel",
+                Price = 10
+            };
+
             TradingItems Food = new TradingItems
             {
                 Name = "Food",
@@ -178,7 +184,7 @@ namespace SpaceTrader
 
             new SpaceTrader.Intro();
 
-            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
         }
     }

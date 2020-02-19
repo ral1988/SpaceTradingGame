@@ -42,6 +42,9 @@ namespace SpaceTrader
             inventory.Items.RemoveAt(output - 1);
         }
 
-        
+        internal void Reset()
+        {
+            Items = new List<Item>();
+        }
     }
 }

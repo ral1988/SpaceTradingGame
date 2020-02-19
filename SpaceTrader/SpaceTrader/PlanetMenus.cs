@@ -7,7 +7,7 @@ namespace SpaceTrader
 {
     class PlanetMenus
     {
-        public static void Menus(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money)
+        public static void Menus(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, Fuel Fuel)
         {
             PlanetSupply planetSupply = new PlanetSupply();
             FailureScreen failureScreen = new FailureScreen();
@@ -70,7 +70,7 @@ namespace SpaceTrader
 
                 Console.WriteLine(".");
 
-                Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
             }
             else if (input.Key == ConsoleKey.D2)
@@ -142,7 +142,7 @@ namespace SpaceTrader
                             }
                         }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
                     }
                     else if (input2.Key == ConsoleKey.D2)
@@ -178,7 +178,7 @@ namespace SpaceTrader
                             }
                         }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
                     }
                     else if (input2.Key == ConsoleKey.D3)
@@ -214,7 +214,7 @@ namespace SpaceTrader
                             }
                         }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
 
                     }
@@ -251,7 +251,7 @@ namespace SpaceTrader
                             }
                         }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
                     }
                     else if (input2.Key == ConsoleKey.D5)
@@ -287,7 +287,7 @@ namespace SpaceTrader
                             }
                         }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
                     }
                     else if (input2.Key == ConsoleKey.D6)
@@ -323,14 +323,14 @@ namespace SpaceTrader
                             }
                         }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
                     }
                     else
                     {
                         Console.WriteLine();
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                        Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
                     }
 
@@ -351,17 +351,48 @@ namespace SpaceTrader
                     var slot = Console.ReadLine();
 
                     int output;
-                    while (!Int32.TryParse(slot, out output) && slot != "A")
-                    {
-                        Console.WriteLine("Invalid input. Try again.");
-                    }
-                    if (slot == "A")
+                    
+                    if (slot == "a")
                     {
                         // Sells all
+                        Console.WriteLine("Are you sure you want to sell all items?");
+                        Console.WriteLine("Y or N?");
+                        input = Console.ReadKey();
 
+                        while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Invalid Input. Try Again.");
+                            input = Console.ReadKey();
+                        }
+                        if (input.Key == ConsoleKey.Y)
+                        {
+                            int amount = inventory.Items.Count;
+
+                            for (int i = 0; i < amount; ++i)
+                            {
+                                int baseprice = (inventory.Items[i]).Price;
+                                
+                                double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
+                                
+                                Money += price;
+                            }
+
+                            inventory.Reset();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
+
+                        }
                     }
                     else
                     {
+                        while (!Int32.TryParse(slot, out output))
+                        {
+                            Console.WriteLine("Invalid input. Try again.");
+                        }
                         int amount = 1;
                         int baseprice = (inventory.Items[output - 1]).Price;
                         double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
@@ -388,7 +419,7 @@ namespace SpaceTrader
                         }
                     }
                     Console.Clear();
-                    Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                    Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
 
                 }
 
@@ -405,7 +436,7 @@ namespace SpaceTrader
             else if (input.Key == ConsoleKey.D5)
             {
                 Console.Clear();
-                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
+                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, Fuel);
             }
         }
 
