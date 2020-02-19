@@ -125,7 +125,7 @@ namespace SpaceTrader
 
                 var time = Warp.WarpCompute(distance);
 
-                addToAge.TimeCalc(time * 365.25);
+                addToAge.TimeCalc(time);
 
                 //Math to calculate distance w/Display
                 Console.WriteLine();
