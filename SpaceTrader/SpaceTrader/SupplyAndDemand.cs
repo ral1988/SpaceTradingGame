@@ -19,7 +19,7 @@ namespace SpaceTrader
 
             //selling
             var amountSelling = amount;
-            var price = amountSelling * demand - marketSize ;
+            var price = amountSelling * demand - marketSize;
 
             return price;
         }
@@ -29,6 +29,7 @@ namespace SpaceTrader
             var demand = demandOfPlanet;
             var marketSize = demand * 7 + basePrice;
 
+            //buying
             var amountBuying = amount;
             var price = amountBuying * marketSize + marketSize;
 
