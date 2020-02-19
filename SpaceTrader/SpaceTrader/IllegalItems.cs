@@ -6,8 +6,17 @@ namespace SpaceTrader
 {
     class IllegalItems : Item
     {
-       
+        public IllegalItems()
+        {
 
-       
+        }
+
+        private void Inspection()
+        {
+
+        }
+
+
     }
+
 }
