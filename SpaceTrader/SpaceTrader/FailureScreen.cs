@@ -12,7 +12,7 @@ namespace SpaceTrader
         }
         public void Failure(ref double Money)
         {
-            if (Money == 0)
+            if (Money <= 0)
             {
                 Console.Clear();
                 Console.WriteLine();

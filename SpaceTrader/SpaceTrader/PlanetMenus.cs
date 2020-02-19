@@ -9,6 +9,7 @@ namespace SpaceTrader
         public static void Menus(List<Planet> StarChart, ref int currentPlanet, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money)
         {
             PlanetSupply planetSupply = new PlanetSupply();
+            FailureScreen failureScreen = new FailureScreen();
 
             //menu for the planet
             Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
@@ -309,11 +310,11 @@ namespace SpaceTrader
                                 
                                 inventory.AddItem(PoloniumFuel);
                             }
-                            if (Money < 0)
+                            if (Money < 0.0)
                             {
                                 //Failure screen
-                                FailureScreen.Failure(ref Money);
-
+                                failureScreen.Failure(ref Money);
+                                
                             }
                         }
                         Console.Clear();
