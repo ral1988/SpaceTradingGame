@@ -312,7 +312,7 @@ namespace SpaceTrader
                             if (Money < 0)
                             {
                                 //Failure screen
-                                FailureScreen.Failure(ref Money);
+                                //FailureScreen.Failure(ref Money);
 
                             }
                         }

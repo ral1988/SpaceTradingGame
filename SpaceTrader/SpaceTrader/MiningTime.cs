@@ -8,6 +8,8 @@ namespace SpaceTrader
     {
         public static double TimeElapsed()
         {
+            var addToAge = new PlayerAge();
+
             double timeToMine = 0;
 
             Random rand = RandomGenerator.NewRand();
@@ -22,6 +24,8 @@ namespace SpaceTrader
             timeToMine /= 2;
 
             timeToMine *= 365.25;
+
+            addToAge.TimeCalc(timeToMine);
             
             return timeToMine;
         }
