@@ -13,7 +13,7 @@ namespace SpaceTrader
 
         
 
-        public int Price;
+        
 
     }
 

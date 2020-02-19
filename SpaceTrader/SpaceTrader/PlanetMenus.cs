@@ -362,7 +362,30 @@ namespace SpaceTrader
                     }
                     else
                     {
-                        inventory.RemoveItem(output, inventory);
+                        int amount = 1;
+                        int baseprice = (inventory.Items[output - 1]).Price;
+                        double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
+                        Console.WriteLine();
+                        Console.WriteLine($"Would you like to sell selected item for $\u03B2 {price}?");
+
+                        Console.WriteLine("Y or N?");
+                        input = Console.ReadKey();
+                        while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Invalid Input. Try Again.");
+                            input = Console.ReadKey();
+                        }
+                        if (input.Key == ConsoleKey.Y)
+                        {
+                            for (int i = 0; i < amount; ++i)
+                            {
+                                Money += price;
+
+                                inventory.RemoveItem(output, inventory);
+                            }
+                            
+                        }
                     }
                     Console.Clear();
                     Menus(StarChart, ref currentPlanet, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money);
