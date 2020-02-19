@@ -9,6 +9,8 @@ namespace SpaceTrader
     {
         public List<double> age = new List<double> {};
 
+        public double endOfAge = 65.00;
+
         public PlayerAge()
         {
 
@@ -17,8 +19,6 @@ namespace SpaceTrader
 
         public void TimeCalc(double accumlator)
         {
-
-            double endOfAge = 65.00;
 
             if (accumlator > 0)
             {
