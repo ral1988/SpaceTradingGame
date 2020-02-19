@@ -20,12 +20,6 @@ namespace SpaceTrader
 
             double endOfAge = 65.00;
 
-            if (age.Sum() < 18)
-            {
-                age.Add(18);
-            }
-
-
             if (accumlator > 0)
             {
                 age.Add(accumlator);

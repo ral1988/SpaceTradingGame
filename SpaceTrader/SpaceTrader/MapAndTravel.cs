@@ -13,8 +13,7 @@ namespace SpaceTrader
         }
         public void DisplayMap(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank)
         {
-            callAge.TimeCalc(18);
-
+            
             Console.ResetColor();
             // Display for the Map
             Console.ForegroundColor = ConsoleColor.Green;
@@ -121,11 +120,9 @@ namespace SpaceTrader
                 //WarpStuff
                 double distance = TravelDistance(StarChart, ref currentPlanet, nextPlanet);
 
-                var addToAge = new PlayerAge();
-
                 var time = Warp.WarpCompute(distance);
 
-                addToAge.TimeCalc(time);
+                callAge.TimeCalc(time);
 
                 //Math to calculate distance w/Display
                 Console.WriteLine();

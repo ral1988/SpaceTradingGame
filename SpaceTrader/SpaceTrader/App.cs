@@ -15,6 +15,8 @@ namespace SpaceTrader
 
             var callAge = new PlayerAge();
 
+            callAge.age.Add(18);
+
             List<Planet> StarChart = new List<Planet>();
 
             Planet SOL = new Planet
