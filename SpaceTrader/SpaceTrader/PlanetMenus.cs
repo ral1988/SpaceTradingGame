@@ -377,9 +377,14 @@ namespace SpaceTrader
                                 double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
                                 
                                 Money += price;
+                                if (Money >= 1000000)
+                                {
+                                   VictoryScreen.Victory(ref Money);
+                                }
                             }
 
                             inventory.Reset();
+                            
                         }
                         else
                         {
@@ -415,6 +420,11 @@ namespace SpaceTrader
                                 Money += price;
 
                                 inventory.RemoveItem(output, inventory);
+
+                                if (Money >= 1000000)
+                                {
+                                    VictoryScreen.Victory(ref Money);
+                                }
                             }
                             
                         }
