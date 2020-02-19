@@ -119,7 +119,11 @@ namespace SpaceTrader
                 //WarpStuff
                 double distance = TravelDistance(StarChart, ref currentPlanet, nextPlanet);
 
+                var addToAge = new PlayerAge();
+
                 var time = Warp.WarpCompute(distance);
+
+                var currentAge = addToAge.TimeCalc(time);
 
                 //Math to calculate distance w/Display
                 Console.WriteLine();

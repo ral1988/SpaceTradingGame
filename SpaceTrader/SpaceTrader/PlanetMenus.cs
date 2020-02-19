@@ -35,6 +35,7 @@ namespace SpaceTrader
             //menu items
             if (input.Key == ConsoleKey.D1)
             {
+                var addToAge = new PlayerAge();
                 //calls the random generator
                 Random rand = RandomGenerator.NewRand();
 
@@ -45,6 +46,9 @@ namespace SpaceTrader
                 int amount = MiningReturns.Returns(result);
 
                 double timeToMine = MiningTime.TimeElapsed();
+
+                var currentAge = addToAge.TimeCalc(timeToMine);
+
 
 
                 //Displays mining result
