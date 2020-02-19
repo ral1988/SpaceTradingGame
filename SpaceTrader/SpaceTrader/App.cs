@@ -114,6 +114,8 @@ namespace SpaceTrader
 
             Fuel.Add(100);
 
+            
+
             TradingItems Food = new TradingItems
             {
                 Name = "Food",
