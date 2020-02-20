@@ -7,7 +7,6 @@ namespace SpaceTrader
 {
     class Fuel : Item
     {
-        public double FuelTank = 0;
         public List<double> currentFuelTank = new List<double> { };
 
         public double Capacity { get; set; }
@@ -24,11 +23,11 @@ namespace SpaceTrader
            var Capacity = capacity;
         }
 
-        public void Add(double newfuel)
+        public void Add(double buyFuel)
         {
-            FuelTank += newfuel;
+            var newFuel = buyFuel;
 
-            currentFuelTank.Add(FuelTank);
+            currentFuelTank.Add(newFuel);
 
             if (currentFuelTank.Sum() > 100.00)
             {
