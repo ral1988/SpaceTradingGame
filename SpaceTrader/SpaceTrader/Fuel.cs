@@ -57,7 +57,10 @@ namespace SpaceTrader
         }
         public void NoFuel()
         {
+            Console.Clear();
             Console.WriteLine("You ran out of fuel, and have died");
+            Console.ReadLine();
+
         }
 
     }

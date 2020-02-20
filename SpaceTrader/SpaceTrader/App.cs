@@ -16,6 +16,16 @@ namespace SpaceTrader
             var callAge = new PlayerAge();
             callAge.age.Add(18);
 
+            Fuel Fuel = new Fuel
+            {
+                Name = "Fuel",
+                Price = 1000
+            };
+
+            Fuel.currentFuelTank.Add(100);
+
+
+
             List<Planet> StarChart = new List<Planet>();
 
             Planet SOL = new Planet
@@ -107,13 +117,7 @@ namespace SpaceTrader
             StarChart.Add(GLIESE832);
             StarChart.Add(HR8832G);
 
-            Fuel Fuel = new Fuel
-            {
-                Name = "Fuel",
-                Price = 10
-            };
-
-            Fuel.currentFuelTank.Add(100);
+            
 
             
 
