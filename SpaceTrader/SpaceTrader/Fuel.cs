@@ -41,12 +41,12 @@ namespace SpaceTrader
         {
             FuelTank -= usedFuel / 20;
 
-            if (FuelTank < 0)
+            if (FuelTank > 0)
             {
                 currentFuelTank.Add(FuelTank);
             }
 
-            currentFuelTank.Add(-10);
+           
 
             if ((currentFuelTank.Sum() < 0) || (currentFuelTank.Sum() == 0))
             {
