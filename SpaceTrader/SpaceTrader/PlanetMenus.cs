@@ -7,7 +7,7 @@ namespace SpaceTrader
 {
     class PlanetMenus
     {
-        public static void Menus(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold)
+        public static void Menus(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold)
         {
             PlanetSupply planetSupply = new PlanetSupply();
             FailureScreen failureScreen = new FailureScreen();
@@ -71,7 +71,7 @@ namespace SpaceTrader
 
                 Console.WriteLine(".");
 
-                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
             }
             else if (input.Key == ConsoleKey.D2)
@@ -111,27 +111,27 @@ namespace SpaceTrader
 
                     if (input2.Key == ConsoleKey.D1)
                     {
-                        input = BuyTextiles(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
+                        input = BuyTextiles(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply);
 
                     }
                     else if (input2.Key == ConsoleKey.D2)
                     {
-                        input = BuyFood(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
+                        input = BuyFood(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply);
 
                     }
                     else if (input2.Key == ConsoleKey.D3)
                     {
-                        input = BuyWater(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
+                        input = BuyWater(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply);
 
                     }
                     else if (input2.Key == ConsoleKey.D4)
                     {
-                        input = BuySpareParts(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
+                        input = BuySpareParts(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply);
 
                     }
                     else if (input2.Key == ConsoleKey.D5)
                     {
-                        input = BuyElectronics(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
+                        input = BuyElectronics(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply);
 
                     }
                     
@@ -139,7 +139,7 @@ namespace SpaceTrader
                     {
                         Console.WriteLine();
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
                     }
 
@@ -164,7 +164,7 @@ namespace SpaceTrader
                     if (slot == "a")
                     {
                         // Sells all
-                        input = SellAll(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank,age, endOfAge, hold, planetSupply);
+                        input = SellAll(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank,age, endOfAge, hold, planetSupply);
                     }
                     else
                     {
@@ -203,7 +203,7 @@ namespace SpaceTrader
                         }
                     }
                     Console.Clear();
-                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
                 }
 
@@ -283,7 +283,7 @@ namespace SpaceTrader
                             }
                         }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
                     }
                     else if (input.Key == ConsoleKey.D3)
@@ -318,13 +318,13 @@ namespace SpaceTrader
                             }
                         }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
                     }
                     else
                     {
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
                     }
 
@@ -336,7 +336,7 @@ namespace SpaceTrader
                 else
                 {
                     Console.Clear();
-                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
                 }
 
@@ -344,16 +344,16 @@ namespace SpaceTrader
             else if (input.Key == ConsoleKey.D4)
             {
                 Console.Clear();
-                input = CantinaOptions(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
+                input = CantinaOptions(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply);
             }
             else if (input.Key == ConsoleKey.D5)
             {
                 Console.Clear();
-                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
             }
         }
 
-        private static ConsoleKeyInfo SellAll(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo SellAll(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine("Are you sure you want to sell all items?");
@@ -389,14 +389,14 @@ namespace SpaceTrader
             else
             {
                 Console.Clear();
-                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
             }
 
             return input;
         }
 
-        private static ConsoleKeyInfo BuyElectronics(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuyElectronics(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -431,11 +431,11 @@ namespace SpaceTrader
                 }
             }
             Console.Clear();
-            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
             return input;
         }
 
-        private static ConsoleKeyInfo BuySpareParts(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuySpareParts(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -470,11 +470,11 @@ namespace SpaceTrader
                 }
             }
             Console.Clear();
-            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
             return input;
         }
 
-        private static ConsoleKeyInfo BuyWater(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuyWater(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -509,11 +509,11 @@ namespace SpaceTrader
                 }
             }
             Console.Clear();
-            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
             return input;
         }
 
-        private static ConsoleKeyInfo BuyFood(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuyFood(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -547,11 +547,11 @@ namespace SpaceTrader
                 }
             }
             Console.Clear();
-            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
             return input;
         }
 
-        private static ConsoleKeyInfo BuyTextiles(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuyTextiles(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -584,11 +584,11 @@ namespace SpaceTrader
                 }
             }
             Console.Clear();
-            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
             return input;
         }
 
-        private static ConsoleKeyInfo CantinaOptions(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo CantinaOptions(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine("You have arrived at the Cantina. What would you like to do?");
@@ -608,25 +608,25 @@ namespace SpaceTrader
             if (input.Key == ConsoleKey.D1)
             {
                 Console.Clear();
-                BuyIllicitItems(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply, ref input);
+                BuyIllicitItems(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, ref input);
             }
             else if (input.Key == ConsoleKey.D2)
             {
                 Console.Clear();
-                input = SellIllicitItems(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
+                input = SellIllicitItems(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply);
 
             }
             else
             {
                 Console.Clear();
-                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
             }
 
             return input;
         }
 
-        private static ConsoleKeyInfo SellIllicitItems(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo SellIllicitItems(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -678,7 +678,7 @@ namespace SpaceTrader
                 else
                 {
                     Console.Clear();
-                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
                 }
             }
@@ -719,11 +719,11 @@ namespace SpaceTrader
                 }
             }
             Console.Clear();
-            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
             return input;
         }
 
-        private static void BuyIllicitItems(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply, ref ConsoleKeyInfo input)
+        private static void BuyIllicitItems(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply, ref ConsoleKeyInfo input)
         {
             Console.WriteLine("What do you want to buy?"); //put it into a new class
             Console.WriteLine();
@@ -774,7 +774,7 @@ namespace SpaceTrader
                     }
                 }
                 Console.Clear();
-                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
             }
             else if (input2.Key == ConsoleKey.D2)
@@ -813,14 +813,14 @@ namespace SpaceTrader
                 else
                 {
                     Console.Clear();
-                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
                 }
             }
             else
             {
                 Console.Clear();
-                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold);
 
             }
         }
