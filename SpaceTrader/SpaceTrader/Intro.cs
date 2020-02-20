@@ -37,6 +37,9 @@ namespace SpaceTrader
 
             Console.Clear();
 
+            var fuel = new Fuel();
+            fuel.currentFuelTank.Add(100);
+
         }
     }
 }
