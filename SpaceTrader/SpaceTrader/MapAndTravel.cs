@@ -150,8 +150,9 @@ namespace SpaceTrader
 
                 //set current planet equal to the planet traveled to.
                 currentPlanet = nextPlanet;
-
-                Fuel.RemoveFuel(distance);
+                var fuel = new Fuel();
+                fuel.RemoveFuel(distance);
+                //add list ref here?
 
                 //FLavor Text
                 Console.Clear();
