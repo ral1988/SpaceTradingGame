@@ -12,9 +12,9 @@ namespace SpaceTrader
         }
         public static void InspectionScreen(Random rand, ref double Money, SmugglerHold hold, InventorySystem inventory, ref PlayerAge callAge)
         {
-            int chance = rand.Next(20);
+            int chance = rand.Next(10);
 
-            if (chance == 5 || chance == 13 && hold.Hold.Count > 0)
+            if (chance == 1 && hold.Hold.Count > 0)
             {
                 //inspection! gonna get wrecked
                 Console.ResetColor();
