@@ -37,7 +37,7 @@ namespace SpaceTrader
             //menu items
             if (input.Key == ConsoleKey.D1)
             {
-                
+
                 //calls the random generator
                 Random rand = RandomGenerator.NewRand();
 
@@ -78,7 +78,7 @@ namespace SpaceTrader
             {
                 Console.Clear();
                 input = TradingPostMenu();
-                
+
 
                 while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2)
                 {
@@ -134,7 +134,7 @@ namespace SpaceTrader
                         input = BuyElectronics(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, age, endOfAge, hold, planetSupply);
 
                     }
-                    
+
                     else
                     {
                         Console.WriteLine();
@@ -146,11 +146,11 @@ namespace SpaceTrader
                 }
                 else if (input.Key == ConsoleKey.D2)
                 {
-                    
+
                     Console.Clear();
                     Console.WriteLine();
                     Console.WriteLine("What would you like to sell?");
-                    
+
                     for (int i = 0; i < inventory.Items.Count; ++i)
                     {
                         Console.WriteLine($"{i + 1}. {(inventory.Items[i]).Name} ");
@@ -160,11 +160,11 @@ namespace SpaceTrader
                     var slot = Console.ReadLine();
 
                     int output;
-                    
+
                     if (slot == "a")
                     {
                         // Sells all
-                        input = SellAll(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, age, endOfAge, hold, planetSupply);
+                        input = SellAll(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
                     }
                     else
                     {
@@ -199,7 +199,7 @@ namespace SpaceTrader
                                     VictoryScreen.Victory(ref Money);
                                 }
                             }
-                            
+
                         }
                     }
                     Console.Clear();
@@ -249,7 +249,7 @@ namespace SpaceTrader
 
                     if (input.Key == ConsoleKey.D1)
                     {
-                        
+
                     }
                     else if (input.Key == ConsoleKey.D2)
                     {
@@ -284,36 +284,57 @@ namespace SpaceTrader
                         }
                         Console.Clear();
                         Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, age, endOfAge, hold);
-
                     }
-                    else if (input.Key == ConsoleKey.D3)
+                    else if (input.Key == ConsoleKey.D4)
                     {
-                        Console.WriteLine();
-                        int amount = AmountCalc(inventory);
+                        Console.Clear();
+                        input = CantinaOptions(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold, planetSupply);
+                    }
+                    else if (input.Key == ConsoleKey.D5)
+                    {
+                        Console.Clear();
+                        new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, currentFuelTank, age, endOfAge, hold);
+                    }
+                }
 
-                        var baseprice = PoloniumFuel.Price;
-                        var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
+            }
+            else if (input.Key == ConsoleKey.D3)
+            {
+                Console.WriteLine();
+                int amount = AmountCalc(inventory);
 
-                        Console.WriteLine($"This will cost $\u03B2{price}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
-                        Console.WriteLine("Y or N?");
-                        input = Console.ReadKey();
-                        while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
-                        {
-                            Console.WriteLine();
-                            Console.WriteLine("Invalid Input. Try Again.");
-                            input = Console.ReadKey();
-                        }
-                        if (input.Key == ConsoleKey.Y)
-                        {
-                            for (int i = 0; i < amount; ++i)
-                            {
-                                inventory.AddItem(PoloniumFuel);
-                            }
-                            Money -= price;
-                            if (Money < 0)
-                            {
-                                //Failure screen
-                                new FailureScreen().Failure(ref Money, age, endOfAge);
+                var baseprice = PoloniumFuel.Price;
+                var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
+
+                Console.WriteLine($"This will cost $\u03B2{price}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+                Console.WriteLine("Y or N?");
+                input = Console.ReadKey();
+                while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Invalid Input. Try Again.");
+                    input = Console.ReadKey();
+                }
+                if (input.Key == ConsoleKey.Y)
+                {
+                    for (int i = 0; i < amount; ++i)
+                    {
+                        inventory.AddItem(PoloniumFuel);
+                    }
+                    Money -= price;
+                    if (Money < 0)
+                    {
+                        //Failure screen
+                        new FailureScreen().Failure(ref Money, age, endOfAge);
+                    }
+                }
+            }
+        private static ConsoleKeyInfo SellAll(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        {
+            ConsoleKeyInfo input;
+            Console.WriteLine("Are you sure you want to sell all items?");
+            Console.WriteLine("Y or N?");
+            input = Console.ReadKey();
 
                             }
                         }
