@@ -230,7 +230,7 @@ namespace SpaceTrader
             }
         }
 
-        private static ConsoleKeyInfo SellAll(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo SellAll(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine("Are you sure you want to sell all items?");
@@ -273,7 +273,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static ConsoleKeyInfo BuyPoloniumFuel(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply, FailureScreen failureScreen)
+        private static ConsoleKeyInfo BuyPoloniumFuel(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply, FailureScreen failureScreen)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -312,7 +312,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static ConsoleKeyInfo BuyElectronics(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuyElectronics(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -351,7 +351,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static ConsoleKeyInfo BuySpareParts(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuySpareParts(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -390,7 +390,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static ConsoleKeyInfo BuyWater(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuyWater(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -429,7 +429,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static ConsoleKeyInfo BuyFood(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuyFood(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -467,7 +467,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static ConsoleKeyInfo BuyTextiles(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo BuyTextiles(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -504,7 +504,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static ConsoleKeyInfo CantinaOptions(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo CantinaOptions(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine("You have arrived at the Cantina. What would you like to do?");
@@ -542,7 +542,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static ConsoleKeyInfo SellIllicitItems(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
+        private static ConsoleKeyInfo SellIllicitItems(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply)
         {
             ConsoleKeyInfo input;
             Console.WriteLine();
@@ -639,7 +639,7 @@ namespace SpaceTrader
             return input;
         }
 
-        private static void BuyIllicitItems(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply, ref ConsoleKeyInfo input)
+        private static void BuyIllicitItems(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply, ref ConsoleKeyInfo input)
         {
             Console.WriteLine("What do you want to buy?"); //put it into a new class
             Console.WriteLine();
