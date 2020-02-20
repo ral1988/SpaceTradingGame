@@ -22,12 +22,6 @@ namespace SpaceTrader
         public void SetInventorySize(double capacity)
         {
            var Capacity = capacity;
-
-            if (Capacity > 100)
-            {
-                Capacity = 100;
-            }
-             
         }
 
         public void Add(double newfuel)
@@ -47,14 +41,24 @@ namespace SpaceTrader
         {
             FuelTank -= usedFuel / 20;
 
-            currentFuelTank.Add(FuelTank);
+            if (FuelTank < 0)
+            {
+                currentFuelTank.Add(FuelTank);
+            }
+
+            currentFuelTank.Add(-10);
 
             if ((currentFuelTank.Sum() < 0) || (currentFuelTank.Sum() == 0))
             {
-                Console.WriteLine("You ran out of fuel, and have died");
+                NoFuel();
             }
 
 
         }
+        public void NoFuel()
+        {
+            Console.WriteLine("You ran out of fuel, and have died");
+        }
+
     }
 }
