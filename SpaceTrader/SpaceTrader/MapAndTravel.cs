@@ -157,6 +157,8 @@ namespace SpaceTrader
                 FlavorText.FlavorPicker(ref currentPlanet);
                 Console.WriteLine();
                 Console.Clear();
+                Random rand = RandomGenerator.NewRand();
+                Inspections.InspectionScreen(rand, ref Money, hold, inventory, ref callAge);
                 PlanetMenus.Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref FuelTank, age, endOfAge, hold);
                 
             }
