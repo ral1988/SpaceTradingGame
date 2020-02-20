@@ -37,14 +37,11 @@ namespace SpaceTrader
             }
         }
 
-        public void Remove(double usedFuel)
+        public void Remove(double distance)
         {
-            FuelTank -= usedFuel / 20;
+            var usedFuel = distance / 20;
 
-            if (FuelTank > 0)
-            {
-                currentFuelTank.Add(FuelTank);
-            }
+            currentFuelTank.Add(usedFuel);
 
            
 
