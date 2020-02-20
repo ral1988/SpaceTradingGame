@@ -22,6 +22,8 @@ namespace SpaceTrader
                 Price = 1000
             };
 
+            
+
             Fuel.currentFuelTank.Add(100.00);
 
 

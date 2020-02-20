@@ -9,18 +9,9 @@ namespace SpaceTrader
     {
         public List<double> currentFuelTank = new List<double> { };
 
-        public double Capacity { get; set; }
-
-        // Constructor
-        public Fuel(double capacity = 100.00)
+        public Fuel()
         {
-            SetInventorySize(capacity);
-        }
 
-        // Set size of fuel tank, retaining contents where possible
-        public void SetInventorySize(double capacity)
-        {
-           var Capacity = capacity;
         }
 
         public void Add(double buyFuel)
@@ -36,11 +27,11 @@ namespace SpaceTrader
             }
         }
 
-        public void Remove(double distance)
+        public void RemoveFuel(double distance)
         {
             var usedFuel = distance / 20;
-
-            currentFuelTank.Add(usedFuel);
+            var usedFuel1 = -usedFuel;
+            currentFuelTank.Add(usedFuel1);
 
            
 
@@ -55,7 +46,8 @@ namespace SpaceTrader
         {
             Console.Clear();
             Console.WriteLine("You ran out of fuel, and have died");
-            Console.ReadLine();
+
+            Environment.Exit(0);
 
         }
 

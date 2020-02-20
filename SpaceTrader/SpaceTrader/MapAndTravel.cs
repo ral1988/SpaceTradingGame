@@ -120,10 +120,6 @@ namespace SpaceTrader
                 //WarpStuff
                 double distance = TravelDistance(StarChart, ref currentPlanet, nextPlanet);
 
-                var fuelTank = new Fuel();
-
-                fuelTank.Remove(distance);
-
                 var time = Warp.WarpCompute(distance);
 
                 callAge.TimeCalc(time);
@@ -154,6 +150,8 @@ namespace SpaceTrader
 
                 //set current planet equal to the planet traveled to.
                 currentPlanet = nextPlanet;
+
+                Fuel.RemoveFuel(distance);
 
                 //FLavor Text
                 Console.Clear();
