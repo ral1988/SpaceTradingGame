@@ -34,7 +34,7 @@ namespace SpaceTrader
 					var timeOfTravel = 365.25 * distance / result;
 
 				return timeOfTravel;
-			}
+				}
 		
 		    
 		}
