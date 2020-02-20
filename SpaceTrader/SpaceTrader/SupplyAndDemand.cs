@@ -31,7 +31,7 @@ namespace SpaceTrader
 
             //buying
             var amountBuying = amount;
-            var price = amountBuying * marketSize + marketSize;
+            var price = amountBuying * demand + marketSize;
 
 
             return price; 
