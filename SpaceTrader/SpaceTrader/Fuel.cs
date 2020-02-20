@@ -6,28 +6,28 @@ namespace SpaceTrader
 {
     class Fuel : Item
     {
-        public int FuelTank = 0;
+        public double FuelTank = 0;
 
-        public int Capacity { get; set; }
+        public double Capacity { get; set; }
 
         // Constructor
-        public Fuel(int capacity = 100)
+        public Fuel(double capacity = 100.00)
         {
             SetInventorySize(capacity);
         }
 
         // Set size of fuel tank, retaining contents where possible
-        public void SetInventorySize(int capacity)
+        public void SetInventorySize(double capacity)
         {
             Capacity = capacity;
         }
 
-        internal void Add(int newfuel)
+        internal void Add(double newfuel)
         {
             FuelTank += newfuel;
         }
 
-        internal void Remove(int usedFuel)
+        internal void Remove(double usedFuel)
         {
             FuelTank -= usedFuel / 20;
         }

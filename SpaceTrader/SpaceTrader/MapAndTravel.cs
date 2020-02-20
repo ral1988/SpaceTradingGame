@@ -11,7 +11,7 @@ namespace SpaceTrader
         {
 
         }
-        public void DisplayMap(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref int FuelTank, List<double> age, double endOfAge, SmugglerHold hold)
+        public void DisplayMap(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CapturedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, ref double FuelTank, List<double> age, double endOfAge, SmugglerHold hold)
         {
             
             Console.ResetColor();
