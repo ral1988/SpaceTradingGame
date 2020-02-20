@@ -164,9 +164,9 @@ namespace SpaceTrader
                 Price = 7000
             };
 
-            DangerousItems CapturedHydrogen = new DangerousItems
+            DangerousItems CompressedHydrogen = new DangerousItems
             {
-                Name = "Captured Hydrogen",
+                Name = "Compressed Hydrogen",
                 Price = 60000
             };
             DangerousItems PoloniumFuel = new DangerousItems
@@ -194,7 +194,7 @@ namespace SpaceTrader
 
             new SpaceTrader.Intro();
 
-            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CapturedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref Fuel.FuelTank, callAge.age, callAge.endOfAge, hold);
+            new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, ref Fuel.FuelTank, callAge.age, callAge.endOfAge, hold);
 
         }
     }
