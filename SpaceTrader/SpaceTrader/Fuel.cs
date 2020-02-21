@@ -29,8 +29,6 @@ namespace SpaceTrader
 
         public void RemoveFuel(double distance)
         {
-        
-            
             if (currentFuelTank.Count() == 0)
                  {
                      currentFuelTank.Add(100);
@@ -43,8 +41,6 @@ namespace SpaceTrader
             {
                 NoFuel();
             }
-
-
         }
         public void NoFuel()
         {
@@ -54,6 +50,5 @@ namespace SpaceTrader
             Environment.Exit(0);
 
         }
-
     }
 }

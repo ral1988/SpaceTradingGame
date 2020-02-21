@@ -17,7 +17,7 @@ namespace SpaceTrader
             callAge.age.Add(18);
 
             var fuel = new Fuel();
-            fuel.currentFuelTank.Add(100.00);
+            fuel.currentFuelTank.Add(100);
 
            
 
