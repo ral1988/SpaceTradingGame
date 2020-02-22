@@ -7,14 +7,14 @@ namespace SpaceTrader
 {
     class Fuel : Item
     {
-        public List<double> currentFuelTank = new List<double> { };
+        public List<double> currentFuelTank = new List<double> {};
 
         public Fuel()
         {
 
         }
 
-        public void Add(double buyFuel)
+        public void AddFuel(double buyFuel)
         {
             var newFuel = buyFuel;
 
@@ -29,18 +29,18 @@ namespace SpaceTrader
 
         public void RemoveFuel(double distance)
         {
-            var usedFuel = distance / 20;
-            var usedFuel1 = -usedFuel;
-            currentFuelTank.Add(usedFuel1);
+            if (currentFuelTank.Count() == 0)
+                 {
+                     currentFuelTank.Add(100);
+                 }
 
-           
-
+            var usedFuel = -1 * distance / 20;
+            currentFuelTank.Add(usedFuel);
+            
             if ((currentFuelTank.Sum() < 0) || (currentFuelTank.Sum() == 0))
             {
                 NoFuel();
             }
-
-
         }
         public void NoFuel()
         {
@@ -50,6 +50,5 @@ namespace SpaceTrader
             Environment.Exit(0);
 
         }
-
     }
 }
