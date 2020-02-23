@@ -16,10 +16,10 @@ namespace SpaceTrader
             Console.WriteLine("\u2551                                                                                                       \u2551");
             Console.WriteLine("\u2551 You have had enough. It is time for you to buy your freedom.                                          \u2551");
             Console.WriteLine("\u2551                                                                                                       \u2551");
-            Console.WriteLine("\u2551 Glurut, Grand Master of Death, says if you pay him $\u03B21,000,000 he will set you free.                  \u2551");
+            Console.WriteLine("\u2551 Glurut, Grand Master of Death, says if you pay him $\u03B2 100,000,000 Space Bucks he will set you    \u2551");
+            Console.WriteLine("\u2551 free.                                                                                                 \u2551");
             Console.WriteLine("\u2551                                                                                                       \u2551");
             Console.WriteLine("\u2551 This is your story.                                                                                   \u2551");
-            Console.WriteLine("\u2551                                                                                                       \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
             Console.WriteLine("\u2551                                                                                                       \u2551");
             Console.WriteLine("\u2551 Press C to Continue.                                                                                  \u2551");
