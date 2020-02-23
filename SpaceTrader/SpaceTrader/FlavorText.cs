@@ -272,12 +272,12 @@ namespace SpaceTrader
             Console.Beep(1422, 500);
             Console.Beep(2000, 500);
             Console.Beep(1422, 500);
+            Console.Beep(2250, 500);
+            Console.Beep(1472, 500);
             Console.Beep(2000, 500);
             Console.Beep(1422, 500);
-            Console.Beep(2000, 500);
-            Console.Beep(1422, 500);
-            Console.Beep(2000, 500);
-            Console.Beep(1422, 500);
+            Console.Beep(4000, 500);
+            Console.Beep(700, 500);
             Console.Beep(2000, 500);
             Console.Beep(1422, 500);
             Console.Beep(2000, 500);
