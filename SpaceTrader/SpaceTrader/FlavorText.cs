@@ -251,23 +251,27 @@ namespace SpaceTrader
         {
             Console.ResetColor();
             Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
+            Console.WriteLine("\u2551 Approaching vessel, proceed with caution. The toxic clouds will confuse your sensors as you approach   \u2551");
+            Console.WriteLine("\u2551 the port. Follow our safety beacons, they will guide you safely here.                                  \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
+            Console.WriteLine("\u2551 You remember hearing stories about this place as a child. You know it is a rich mineral planet, and    \u2551");
+            Console.WriteLine("\u2551 some miners have been successful in making a business. However, it is very expensive for supplies.     \u2551");
+            Console.WriteLine("\u2551 On top of that, tempatures will kill you instantly if you do not have proper equipment and supplies.   \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
+            Console.WriteLine("\u2551 You follow the beacons exactly to the port with many alarms flashing and beeping at you.               \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 Press C to Continue.                                                                                   \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
+
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
 
             var input = Console.ReadKey();
 
@@ -285,17 +289,14 @@ namespace SpaceTrader
         {
             Console.ResetColor();
             Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
+            Console.WriteLine("\u2551 As you approach, you noticed the magestic floating cities of HR8832. The planet is very much like      \u2551");
+            Console.WriteLine("\u2551 the tropics on Earth, but it's massive in comparisons. It is quite popular for tourism and marine      \u2551");
+            Console.WriteLine("\u2551 biologist.                                                                                             \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
+            Console.WriteLine("\u2551 The main city Manaan has the most interstellar trading. You give your call sign and they approve your  \u2551");
+            Console.WriteLine("\u2551 approach to the main docks.                                                                            \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
+            Console.WriteLine("\u2551 You've traveled a long way, might as well soak in the warm weather and make some trades.               \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
             Console.WriteLine("\u2551                                                                                                        \u2551");
