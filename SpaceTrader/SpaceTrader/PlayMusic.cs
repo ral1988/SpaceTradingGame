@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Media;
-using System.Windows;
+using System.Windows.Media;
 
 
 namespace SpaceTrader
@@ -13,6 +12,8 @@ namespace SpaceTrader
         {
             Console.Beep();
         }
+
+        public bool HasAudio { get; }
 
         public void MidiPLayer()
         {
