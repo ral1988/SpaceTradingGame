@@ -272,6 +272,24 @@ namespace SpaceTrader
             Console.Beep(1422, 500);
             Console.Beep(2000, 500);
             Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
+            Console.Beep(2000, 500);
+            Console.Beep(1422, 500);
 
             var input = Console.ReadKey();
 
