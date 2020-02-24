@@ -722,10 +722,11 @@ namespace SpaceTrader
             }
             else
             {
-                while (!Int32.TryParse(slot, out output))
+                while ((!Int32.TryParse(slot, out output)) && (output != 1 || output != 2))
                 {
                     Console.WriteLine("Invalid input. Try again.");
                 }
+                
                 int amount = 1;
                 int baseprice = (hold.Hold[output - 1]).Price;
                 double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
