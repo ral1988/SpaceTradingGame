@@ -181,11 +181,11 @@ namespace SpaceTrader
             Console.ResetColor();
             Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
             Console.WriteLine("\u2551 As you approach, you begin to see the beautiful mountains and forests of Luyten's Star B. It reminds   \u2551");
-            Console.WriteLine("\u2551 you Kashyyyk - the homeworld of the Wookiees. Luckily the empire hasn't enslaved the local population  \u2551");
-            Console.WriteLine("\u2551 but there's a lot of 'spice' made here.                                                                \u2551");
+            Console.WriteLine("\u2551 you of Kashyyyk - the homeworld of the Wookiees. Luckily the empire hasn't enslaved the local          \u2551");
+            Console.WriteLine("\u2551 population but there's a lot of 'spice' made here.                                                     \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 Many ex-pat russians moved here because some parts of the planet are like the Siberian forest. And for \u2551");
-            Console.WriteLine("\u2551 no real reason, the trans siberian orchestra relocated here 100 years.                                 \u2551");
+            Console.WriteLine("\u2551 no real reason, the trans siberian orchestra relocated here 100 years ago.                             \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 There are no gurantees in trading. The sooner you accept that the sooner you can release your          \u2551");
             Console.WriteLine("\u2551 expectations and focus unconditionally on a proven process.                                            \u2551");
@@ -215,13 +215,13 @@ namespace SpaceTrader
             Console.WriteLine("\u2551 As you approach, you noticed how disjunct Wolf 1061 C. The light size is a desert, and the dark is a   \u2551");
             Console.WriteLine("\u2551 frozen tundra. Luckily the trading post is on the terminator line.                                     \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551 The main tower calls hails you and informs you that there are some special deals happening at the      \u2551");
+            Console.WriteLine("\u2551 The main tower  hails you and informs you that there are some special deals happening at the           \u2551");
             Console.WriteLine("\u2551 Cantina. But wouldn't tell you what they were. Probably illegal.                                       \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551 You are going to follow the advice of Jaymin Shah, 'You never know what kind of setup market will      \u2551");
-            Console.WriteLine("\u2551 present to you, your objective should be to find opportunity where risk reward ratio is best.'         \u2551");
+            Console.WriteLine("\u2551 You never know what kind of setup market will present to you, your objective should be to find         \u2551");
+            Console.WriteLine("\u2551 opportunity where risk reward ratio is best.                                                           \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551 Or as Marty McFlywould say, 'This is heavy'.                                                           \u2551");
+            Console.WriteLine("\u2551 Or as Marty McFly would say, 'This is heavy'.                                                          \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
             Console.WriteLine("\u2551                                                                                                        \u2551");
@@ -260,6 +260,8 @@ namespace SpaceTrader
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
 
+            var input = Console.ReadKey();
+
             Console.Beep(2000, 250);
             Console.Beep(1422, 250);
             Console.Beep(2000, 250);
@@ -285,7 +287,7 @@ namespace SpaceTrader
             Console.Beep(2000, 250);
             Console.Beep(1422, 250);
 
-            var input = Console.ReadKey();
+            
 
             while (input.Key != ConsoleKey.C)
             {
