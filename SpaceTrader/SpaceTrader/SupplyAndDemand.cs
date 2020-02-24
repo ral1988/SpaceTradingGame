@@ -18,14 +18,16 @@ namespace SpaceTrader
             //selling
             var price = ((demand * basePrice) / amount) + ((basePrice + 100)/basePrice);
 
-            if (price > amount * basePrice / 2)
+            if (price > amount * basePrice * 10)
             {
-                price = amount * basePrice * .75;
-                if (price > 250000.00 * amount)
-                {
-                    price = 250000.00 * amount;
-                    return price;
-                }
+                price = amount * basePrice * 10;
+               
+                return price;
+            }
+
+            if (price > 250000.00 * amount)
+            {
+                price = 250000.00 * amount;
                 return price;
             }
 
