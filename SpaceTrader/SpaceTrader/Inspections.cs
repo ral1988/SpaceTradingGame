@@ -37,6 +37,26 @@ namespace SpaceTrader
                 Console.WriteLine("\u2551                                                                                                        \u2551");
                 Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
 
+                Console.Beep(440, 500);
+                Console.Beep(440, 500);
+                Console.Beep(440, 500);
+                Console.Beep(349, 350);
+                Console.Beep(523, 150);
+                Console.Beep(440,500);
+                Console.Beep(349, 350);
+                Console.Beep(523, 150);
+                Console.Beep(440, 1000);
+                Console.Beep(659,500);
+                Console.Beep(659, 500);
+                Console.Beep(659, 500);
+                Console.Beep(698, 350);
+                Console.Beep(523, 150);
+                Console.Beep(415, 500);
+                Console.Beep(349, 350);
+                Console.Beep(523, 150);
+                Console.Beep(440, 1000);
+
+
                 var input = Console.ReadKey();
 
                 while (input.Key != ConsoleKey.C)

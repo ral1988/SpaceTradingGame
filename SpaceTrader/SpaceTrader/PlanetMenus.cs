@@ -51,7 +51,7 @@ namespace SpaceTrader
 
                 callAge.TimeCalc(timeToMine / 365.25);
 
-
+                new FailureScreen().Failure(ref Money, age, endOfAge);
 
                 //Displays mining result
                 Console.Clear();

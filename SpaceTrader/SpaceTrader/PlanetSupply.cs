@@ -246,7 +246,7 @@ namespace SpaceTrader
         public double GLIESE832Selling(int amount, int basePrice)
         {
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 130.25; //lots of minerals in a hostile enviroment
+            var demandOfPlanet = 800.25; //lots of minerals in a hostile enviroment
             var price = SupplyAndDemand.Selling(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -257,7 +257,7 @@ namespace SpaceTrader
         {
 
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 130.25; //supplies are hard to get, far away from Earth
+            var demandOfPlanet = 800.25; //supplies are hard to get, far away from Earth
             var price = SupplyAndDemand.Buying(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -265,7 +265,7 @@ namespace SpaceTrader
         public double HR8832GSelling(int amount, int basePrice)
         {
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 13.25; //Like earth but far
+            var demandOfPlanet = 200.25; //Like earth but far
             var price = SupplyAndDemand.Selling(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -276,7 +276,7 @@ namespace SpaceTrader
         {
 
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 13.25; //Like earth but far
+            var demandOfPlanet = 0.25; //Like earth but far
             var price = SupplyAndDemand.Buying(demandOfPlanet, amount, basePrice);
 
             return price;

@@ -309,7 +309,7 @@ namespace SpaceTrader
             Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
             Console.WriteLine("\u2551 As you approach, you noticed the magestic floating cities of HR8832. The planet is very much like      \u2551");
             Console.WriteLine("\u2551 the tropics on Earth, but it's massive in comparisons. It is quite popular for tourism and marine      \u2551");
-            Console.WriteLine("\u2551 biologist.                                                                                             \u2551");
+            Console.WriteLine("\u2551 biologists.                                                                                             \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 The main city Manaan has the most interstellar trading. You give your call sign and they approve your  \u2551");
             Console.WriteLine("\u2551 approach to the main docks.                                                                            \u2551");
