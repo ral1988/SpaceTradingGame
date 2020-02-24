@@ -91,7 +91,7 @@ namespace SpaceTrader
             Console.WriteLine("\u2551 hitting a massive mountain due to reduced visibility.                                                  \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 As you touch down near the settlement, your ship stirs up a blinding amount of dust. You shut down your\u2551");
-            Console.WriteLine("\u2551 thrusters. The surface temperature is -38\u00B0F and there isn't any oxygen so you prepare your        \u2551");
+            Console.WriteLine("\u2551 thrusters. The surface temperature is -38\u00B0F and there isn't any oxygen so you prepare your             \u2551");
             Console.WriteLine("\u2551 exo-suit.                                                                                              \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
             Console.WriteLine("\u2551                                                                                                        \u2551");
@@ -116,7 +116,7 @@ namespace SpaceTrader
         {
             Console.ResetColor();
             Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
-            Console.WriteLine("\u2551 You tap on your gauges to check if it was really 274\u00B0F below zero. So... So... cold.              \u2551");
+            Console.WriteLine("\u2551 You tap on your gauges to check if it was really 274\u00B0F below zero. So... So... cold.                   \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 There are some nice ice formations out on the horizon but you can't get over how cold it is.           \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
@@ -185,7 +185,7 @@ namespace SpaceTrader
             Console.WriteLine("\u2551 population but there's a lot of 'spice' made here.                                                     \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 Many ex-pat russians moved here because some parts of the planet are like the Siberian forest. And for \u2551");
-            Console.WriteLine("\u2551 no real reason, the trans siberian orchestra relocated here 100 years ago.                             \u2551");
+            Console.WriteLine("\u2551 no real reason, the Trans Siberian Orchestra relocated here 100 years ago.                             \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 There are no gurantees in trading. The sooner you accept that the sooner you can release your          \u2551");
             Console.WriteLine("\u2551 expectations and focus unconditionally on a proven process.                                            \u2551");
@@ -218,7 +218,7 @@ namespace SpaceTrader
             Console.WriteLine("\u2551 The main tower  hails you and informs you that there are some special deals happening at the           \u2551");
             Console.WriteLine("\u2551 Cantina. But wouldn't tell you what they were. Probably illegal.                                       \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551 You never know what kind of setup market will present to you, your objective should be to find         \u2551");
+            Console.WriteLine("\u2551 You never know what kind of setup the market will present to you, your objective should be to find     \u2551");
             Console.WriteLine("\u2551 opportunity where risk reward ratio is best.                                                           \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 Or as Marty McFly would say, 'This is heavy'.                                                          \u2551");
@@ -255,12 +255,8 @@ namespace SpaceTrader
             Console.WriteLine("\u2551 You follow the beacons exactly to the port with many alarms flashing and beeping at you.               \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u2551 Press C to Continue.                                                                                   \u2551");
-            Console.WriteLine("\u2551                                                                                                        \u2551");
-            Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
-
-            var input = Console.ReadKey();
+            
+           
 
             Console.Beep(2000, 250);
             Console.Beep(1422, 250);
@@ -287,7 +283,12 @@ namespace SpaceTrader
             Console.Beep(2000, 250);
             Console.Beep(1422, 250);
 
-            
+            Console.WriteLine("\u2551                                                                                                        \u2551");
+            Console.WriteLine("\u2551 Press C to Continue.                                                                                   \u2551");
+            Console.WriteLine("\u2551                                                                                                        \u2551");
+            Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
+
+            var input = Console.ReadKey();
 
             while (input.Key != ConsoleKey.C)
             {

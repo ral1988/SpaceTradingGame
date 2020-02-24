@@ -194,7 +194,7 @@ namespace SpaceTrader
 
                                 inventory.RemoveItem(output, inventory);
 
-                                if (Money >= 100000000)
+                                if (Money >= 10000000)
                                 {
                                     VictoryScreen.Victory(ref Money);
                                 }
@@ -415,7 +415,7 @@ namespace SpaceTrader
                     double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
 
                     Money += price;
-                    if (Money >= 100000000)
+                    if (Money >= 10000000)
                     {
                         VictoryScreen.Victory(ref Money);
                     }
@@ -704,7 +704,7 @@ namespace SpaceTrader
                         double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
 
                         Money += price;
-                        if (Money >= 100000000)
+                        if (Money >= 10000000)
                         {
                             VictoryScreen.Victory(ref Money);
                         }
@@ -749,7 +749,7 @@ namespace SpaceTrader
 
                         hold.RemoveItem(output, hold);
 
-                        if (Money >= 100000000)
+                        if (Money >= 10000000)
                         {
                             VictoryScreen.Victory(ref Money);
                         }
@@ -847,6 +847,9 @@ namespace SpaceTrader
                         new FailureScreen().Failure(ref Money, age, endOfAge);
 
                     }
+                    Console.Clear();
+                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
+
 
                 }
                 else

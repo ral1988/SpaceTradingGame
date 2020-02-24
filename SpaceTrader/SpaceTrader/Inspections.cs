@@ -12,7 +12,7 @@ namespace SpaceTrader
         }
         public static void InspectionScreen(Random rand, ref double Money, SmugglerHold hold, InventorySystem inventory, ref PlayerAge callAge)
         {
-            int chance = rand.Next(10);
+            int chance = rand.Next(2);
 
             if (chance == 1 && hold.Hold.Count > 0)
             {
@@ -32,11 +32,7 @@ namespace SpaceTrader
                 Console.WriteLine("\u2551                                                                                                        \u2551");
                 Console.WriteLine("\u2551 After a lengthy stay in the detention center, you are released and go to get your ship out of impound. \u2551");
                 Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
-                Console.WriteLine("\u2551                                                                                                        \u2551");
-                Console.WriteLine("\u2551 Press C to Continue.                                                                                   \u2551");
-                Console.WriteLine("\u2551                                                                                                        \u2551");
-                Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
-
+                
                 Console.Beep(440, 500);
                 Console.Beep(440, 500);
                 Console.Beep(440, 500);
@@ -55,6 +51,11 @@ namespace SpaceTrader
                 Console.Beep(349, 350);
                 Console.Beep(523, 150);
                 Console.Beep(440, 1000);
+
+                Console.WriteLine("\u2551                                                                                                        \u2551");
+                Console.WriteLine("\u2551 Press C to Continue.                                                                                   \u2551");
+                Console.WriteLine("\u2551                                                                                                        \u2551");
+                Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
 
 
                 var input = Console.ReadKey();
