@@ -29,8 +29,6 @@ namespace SpaceTrader
                 return price;
             }
 
-           
-
             return price;
         }
 
