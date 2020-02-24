@@ -11,12 +11,13 @@ namespace SpaceTrader
             PlayerSetup();
         }
 
-        private void PlayerSetup()
+        public string PlayerSetup()
         {
             Console.Write("What is your name?: ");
             string endUserName = Console.ReadLine();
             Console.WriteLine($"Welcome to SpaceTrade {endUserName}!");
-            Console.Clear();
+
+            return endUserName;
         }
 
         private void PlayerRace()

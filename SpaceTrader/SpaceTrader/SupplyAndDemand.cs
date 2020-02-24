@@ -11,7 +11,6 @@ namespace SpaceTrader
 
         }
 
-
         public double Selling(double demandOfPlanet, int amount, int basePrice)
         {
             var demand = demandOfPlanet;
@@ -33,9 +32,7 @@ namespace SpaceTrader
             var amountBuying = amount;
             var price = amountBuying * demand + marketSize;
 
-
             return price; 
         }
     }
-   
 }
