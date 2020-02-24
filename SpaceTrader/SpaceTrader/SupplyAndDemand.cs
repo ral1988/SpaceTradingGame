@@ -16,7 +16,7 @@ namespace SpaceTrader
             var demand = demandOfPlanet;
 
             //selling
-            var price = (demand * basePrice) / (amount / 10 )+ (basePrice + 100)/basePrice;
+            var price = ((demand * basePrice) / amount) + ((basePrice + 100)/basePrice);
 
             if (price > amount * basePrice / 2)
             {
