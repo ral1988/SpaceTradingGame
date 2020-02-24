@@ -11,7 +11,7 @@ namespace SpaceTrader
         {
             var currentPlanet = 0;
 
-            double Money = 1000.0;
+            double Money = 100000.00;
 
             var callAge = new PlayerAge();
             callAge.age.Add(18);
