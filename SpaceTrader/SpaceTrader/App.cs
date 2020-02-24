@@ -198,6 +198,8 @@ namespace SpaceTrader
 
             new SpaceTrader.Intro();
 
+            new SpaceTrader.Instructions();
+
             new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, fuel.currentFuelTank, callAge.age, callAge.endOfAge, hold, fuel);
 
         }
