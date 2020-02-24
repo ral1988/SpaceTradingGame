@@ -30,7 +30,7 @@ namespace SpaceTrader
         public void RemoveFuel(double distance)
         {
             
-            var usedFuel = -1 * (distance / 4);
+            var usedFuel = -1 * (distance * 2);
             currentFuelTank.Add(usedFuel);
 
             if ((currentFuelTank.Sum() < 0) || (currentFuelTank.Sum() == 0))
