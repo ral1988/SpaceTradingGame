@@ -80,7 +80,7 @@ namespace SpaceTrader
                 input = TradingPostMenu();
                 
 
-                while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2)
+                while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3)
                 {
                     Console.WriteLine();
                     Console.WriteLine("Invalid Input. Try Again.");
@@ -206,12 +206,19 @@ namespace SpaceTrader
                     Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
 
                 }
+                else
+                {
+                    Console.Clear();
+                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
 
+                }
 
             }
             else if (input.Key == ConsoleKey.D3)
             {
                 Console.Clear();
+                FlavorText.FuelDepot();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Welcome to the Fuel Depot!");
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine();
@@ -686,6 +693,8 @@ namespace SpaceTrader
         private static ConsoleKeyInfo CantinaOptions(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, PlanetSupply planetSupply, Fuel fuel)
         {
             ConsoleKeyInfo input;
+            FlavorText.Cantina();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("You have arrived at the Cantina. What would you like to do?");
             Console.WriteLine();
             Console.WriteLine("1. Buy Illicit Items");
@@ -952,6 +961,7 @@ namespace SpaceTrader
             Console.WriteLine();
             Console.WriteLine("1. Buy Items");
             Console.WriteLine("2. Sell Items");
+            Console.WriteLine("3. Go Back");
 
             var input = Console.ReadKey();
 

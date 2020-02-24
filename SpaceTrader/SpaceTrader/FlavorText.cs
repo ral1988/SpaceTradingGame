@@ -245,8 +245,8 @@ namespace SpaceTrader
         {
             Console.ResetColor();
             Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
-            Console.WriteLine("\u2551 Approaching vessel, proceed with caution. The toxic clouds will confuse your sensors as you approach   \u2551");
-            Console.WriteLine("\u2551 the port. Follow our safety beacons, they will guide you safely here.                                  \u2551");
+            Console.WriteLine("\u2551 'Approaching vessel, proceed with caution. The toxic clouds will confuse your sensors as you approach  \u2551");
+            Console.WriteLine("\u2551 the port. Follow our safety beacons, they will guide you safely here.'                                 \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 You remember hearing stories about this place as a child. You know it is a rich mineral planet, and    \u2551");
             Console.WriteLine("\u2551 some miners have been successful in making a business. However, it is very expensive for supplies.     \u2551");
@@ -331,6 +331,49 @@ namespace SpaceTrader
             Console.Clear();
         }
 
+
+        public static void Cantina()
+        {
+            Console.ResetColor();
+            Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u2551    \u2588\u2588\u2588\u2588\u2588\u2588\u2588     \u2588    \u2588\u2588    \u2588 \u2588\u2588\u2588\u2588\u2588\u2588\u2588  \u2588  \u2588\u2588    \u2588    \u2588                                       \u2551");
+            Console.WriteLine("\u2551    \u2588          \u2588 \u2588   \u2588 \u2588   \u2588    \u2588     \u2588  \u2588 \u2588   \u2588   \u2588 \u2588                                      \u2551");
+            Console.WriteLine("\u2551    \u2588          \u2588\u2588\u2588   \u2588  \u2588  \u2588    \u2588     \u2588  \u2588  \u2588  \u2588   \u2588\u2588\u2588                                      \u2551");
+            Console.WriteLine("\u2551    \u2588         \u2588   \u2588  \u2588   \u2588 \u2588    \u2588     \u2588  \u2588   \u2588 \u2588  \u2588   \u2588                                     \u2551");
+            Console.WriteLine("\u2551    \u2588\u2588\u2588\u2588\u2588\u2588\u2588   \u2588   \u2588  \u2588    \u2588\u2588    \u2588     \u2588  \u2588    \u2588\u2588  \u2588   \u2588                                     \u2551");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u2551   'It ain't a party until Han shoots first.'                                               \u2551");
+            Console.WriteLine("\u2551       - Obi Wan Kenobi (Probably)                                                          \u2551");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
+            Console.WriteLine();
+
+
+
+        }
+
+        public static void FuelDepot()
+        {
+            Console.ResetColor();
+            Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u2551  \u2588\u2588\u2588\u2588\u2588\u2588  \u2588    \u2588  \u2588\u2588\u2588\u2588\u2588\u2588   \u2588             \u2588\u2588\u2588\u2588\u2588    \u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588    \u2588\u2588\u2588\u2588\u2588\u2588  \u2588\u2588\u2588\u2588\u2588\u2588\u2588         \u2551");
+            Console.WriteLine("\u2551  \u2588       \u2588    \u2588  \u2588        \u2588             \u2588    \u2588   \u2588        \u2588    \u2588   \u2588    \u2588     \u2588            \u2551");
+            Console.WriteLine("\u2551  \u2588\u2588\u2588\u2588    \u2588    \u2588  \u2588\u2588\u2588\u2588     \u2588             \u2588     \u2588  \u2588\u2588\u2588\u2588     \u2588\u2588\u2588\u2588\u2588    \u2588    \u2588     \u2588            \u2551");
+            Console.WriteLine("\u2551  \u2588       \u2588    \u2588  \u2588        \u2588             \u2588    \u2588   \u2588        \u2588        \u2588    \u2588     \u2588            \u2551");
+            Console.WriteLine("\u2551  \u2588       \u2588\u2588\u2588\u2588\u2588\u2588  \u2588\u2588\u2588\u2588\u2588\u2588   \u2588\u2588\u2588\u2588\u2588\u2588        \u2588\u2588\u2588\u2588\u2588    \u2588\u2588\u2588\u2588\u2588\u2588   \u2588        \u2588\u2588\u2588\u2588\u2588\u2588     \u2588            \u2551");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u2551   'I have ways of making money that you know nothing of.'                                  \u2551");
+            Console.WriteLine("\u2551       - John D. Rockefeller                                                                \u2551");
+            Console.WriteLine("\u2551                                                                                            \u2551");
+            Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
+            Console.WriteLine();
+        }
 
 
 

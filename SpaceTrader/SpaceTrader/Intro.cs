@@ -16,8 +16,7 @@ namespace SpaceTrader
             Console.WriteLine("\u2551                                                                                                       \u2551");
             Console.WriteLine("\u2551 You have had enough. It is time for you to buy your freedom.                                          \u2551");
             Console.WriteLine("\u2551                                                                                                       \u2551");
-            Console.WriteLine("\u2551 Glurut, Grand Master of Death, says if you pay him $\u03B2 10,000,000 Space Bucks he will set you          \u2551");
-            Console.WriteLine("\u2551 free.                                                                                                 \u2551");
+            Console.WriteLine("\u2551 Glurut, Grand Master of Death, says if you pay him $\u03B2 10,000,000 Space Bucks he will set you free.    \u2551");
             Console.WriteLine("\u2551                                                                                                       \u2551");
             Console.WriteLine("\u2551 After your father died, he left you with his spaceship, the NOVIS, $\u03B2 1,000 and a small mining rig.   \u2551");
             Console.WriteLine("\u2551                                                                                                       \u2551");

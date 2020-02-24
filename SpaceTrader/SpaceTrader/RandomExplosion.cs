@@ -13,9 +13,9 @@ namespace SpaceTrader
 
         public static void Explosion(Random rand, InventorySystem inventory)
         {
-            int chance = rand.Next(3);
+            int chance = rand.Next(100);
 
-            if (chance == 2 || chance == 1)
+            if (chance == 25 || chance == 75)
             {
                 for (int i = 0; i < inventory.Items.Count; ++i)
                 {

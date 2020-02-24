@@ -12,7 +12,7 @@ namespace SpaceTrader
         }
         public static void InspectionScreen(Random rand, ref double Money, SmugglerHold hold, InventorySystem inventory, ref PlayerAge callAge)
         {
-            int chance = rand.Next(2);
+            int chance = rand.Next(10);
 
             if (chance == 1 && hold.Hold.Count > 0)
             {
