@@ -176,7 +176,7 @@ namespace SpaceTrader
                         int baseprice = (inventory.Items[output - 1]).Price;
                         double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
                         Console.WriteLine();
-                        Console.WriteLine($"Would you like to sell selected item for $\u03B2 {price}?");
+                        Console.WriteLine($"Would you like to sell selected item for $\u03B2 {String.Format("{0:0,0.00}", price)}?");
 
                         Console.WriteLine("Y or N?");
                         input = Console.ReadKey();
@@ -264,7 +264,7 @@ namespace SpaceTrader
                         var baseprice = fuel.Price;
                         var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-                        Console.WriteLine($"This will cost $\u03B2{price}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+                        Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
                         Console.WriteLine("Y or N?");
                         input = Console.ReadKey();
                         while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
@@ -297,7 +297,7 @@ namespace SpaceTrader
                         var baseprice = CompressedHydrogen.Price;
                         var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-                        Console.WriteLine($"This will cost $\u03B2{price}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+                        Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
                         Console.WriteLine("Y or N?");
                         input = Console.ReadKey();
                         while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
@@ -443,7 +443,7 @@ namespace SpaceTrader
             var baseprice = Electronics.Price;
             var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-            Console.WriteLine($"This will cost $\u03B2{price}. Would you like to Continue?");
+            Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. Would you like to Continue?");
             Console.WriteLine("Y or N?");
             input = Console.ReadKey();
             while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
@@ -482,7 +482,7 @@ namespace SpaceTrader
             var baseprice = SpareParts.Price;
             var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-            Console.WriteLine($"This will cost $\u03B2{price}. Would you like to Continue?");
+            Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. Would you like to Continue?");
             Console.WriteLine("Y or N?");
             input = Console.ReadKey();
             while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
@@ -521,7 +521,7 @@ namespace SpaceTrader
             var baseprice = Water.Price;
             var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-            Console.WriteLine($"This will cost $\u03B2{price}. Would you like to Continue?");
+            Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. Would you like to Continue?");
             Console.WriteLine("Y or N?");
             input = Console.ReadKey();
             while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
@@ -560,7 +560,7 @@ namespace SpaceTrader
             var baseprice = Food.Price;
             var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-            Console.WriteLine($"This will cost $\u03B2{price}. Would you like to Continue?");
+            Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. Would you like to Continue?");
             Console.WriteLine("Y or N?");
             input = Console.ReadKey();
             while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
@@ -598,7 +598,7 @@ namespace SpaceTrader
             var baseprice = Textiles.Price;
             var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-            Console.WriteLine($"This will cost $\u03B2{price}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+            Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
             Console.WriteLine("Y or N?");
             input = Console.ReadKey();
             while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
@@ -731,7 +731,7 @@ namespace SpaceTrader
                 int baseprice = (hold.Hold[output - 1]).Price;
                 double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
                 Console.WriteLine();
-                Console.WriteLine($"Would you like to sell selected item for $\u03B2 {price}?");
+                Console.WriteLine($"Would you like to sell selected item for $\u03B2 {String.Format("{0:0,0.00}", price)}?");
 
                 Console.WriteLine("Y or N?");
                 input = Console.ReadKey();
@@ -788,7 +788,7 @@ namespace SpaceTrader
                 var baseprice = Spice.Price;
                 var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-                Console.WriteLine($"This will cost $\u03B2{price}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+                Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
                 Console.WriteLine("Y or N?");
                 input = Console.ReadKey();
                 while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
@@ -824,7 +824,7 @@ namespace SpaceTrader
                 var baseprice = Weapons.Price;
                 var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-                Console.WriteLine($"This will cost $\u03B2{price}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+                Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
                 Console.WriteLine("Y or N?");
                 input = Console.ReadKey();
                 while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
