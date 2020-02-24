@@ -46,5 +46,11 @@ namespace SpaceTrader
             Environment.Exit(0);
 
         }
+
+        public void SellFuel(int amount)
+        {
+            var usedFuel = -1 * (amount);
+            currentFuelTank.Add(usedFuel);
+        }
     }
 }
