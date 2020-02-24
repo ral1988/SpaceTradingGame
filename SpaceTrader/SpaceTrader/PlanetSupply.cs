@@ -10,53 +10,53 @@ namespace SpaceTrader
         {
 
         }
-        public double PlanetPurchaseSelection(ref int currentPlanet, int baseprice, int amount)
+        public double PlanetPurchaseSelection(ref int currentPlanet, int basePrice, int amount)
         {
             if (currentPlanet == 0)
             {
-                var price = SolBuying(amount, baseprice);
+                var price = SolBuying(amount, basePrice);
 
                 return price;
             }
             else if ( currentPlanet == 1)
             {
-                var price = PCBBuying(amount, baseprice);
+                var price = PCBBuying(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 2)
             {
-                var price = BSBBuying(amount, baseprice);
+                var price = BSBBuying(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 3)
             {
-                var price = ROSS128Buying(amount, baseprice);
+                var price = ROSS128Buying(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 4)
             {
-                var price = LSBBuying(amount, baseprice);
+                var price = LSBBuying(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 5)
             {
-                var price = WOLF1061Buying(amount, baseprice);
+                var price = WOLF1061Buying(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 6)
             {
-                var price = GLIESE832Buying(amount, baseprice);
+                var price = GLIESE832Buying(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 7)
             {
-                var price = HR8832GBuying(amount, baseprice);
+                var price = HR8832GBuying(amount, basePrice);
 
                 return price;
             }
@@ -67,53 +67,53 @@ namespace SpaceTrader
 
         }
 
-        public double PlanetSellingSelection(ref int currentPlanet, int baseprice, int amount)
+        public double PlanetSellingSelection(ref int currentPlanet, int basePrice, int amount)
         {
             if (currentPlanet == 0)
             {
-                var price = SolSelling(amount, baseprice);
+                var price = SolSelling(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 1)
             {
-                var price = PCBSelling(amount, baseprice);
+                var price = PCBSelling(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 2)
             {
-                var price = BSBSelling(amount, baseprice);
+                var price = BSBSelling(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 3)
             {
-                var price = ROSS128Selling(amount, baseprice);
+                var price = ROSS128Selling(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 4)
             {
-                var price = LSBSelling(amount, baseprice);
+                var price = LSBSelling(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 5)
             {
-                var price = WOLF1061Selling(amount, baseprice);
+                var price = WOLF1061Selling(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 6)
             {
-                var price = GLIESE832Selling(amount, baseprice);
+                var price = GLIESE832Selling(amount, basePrice);
 
                 return price;
             }
             else if (currentPlanet == 7)
             {
-                var price = HR8832GSelling(amount, baseprice);
+                var price = HR8832GSelling(amount, basePrice);
 
                 return price;
             }

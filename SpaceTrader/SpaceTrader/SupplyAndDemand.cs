@@ -16,8 +16,20 @@ namespace SpaceTrader
             var demand = demandOfPlanet;
 
             //selling
-            var amountSelling = amount;
-            var price = demand - (basePrice / amountSelling);
+            var price = (demand * basePrice) / amount + (basePrice + 100)/basePrice;
+
+            if (price > amount * basePrice / 2)
+            {
+                price = amount * basePrice * .75;
+                if (price > 250000.00 * amount)
+                {
+                    price = 250000.00 * amount;
+                    return price;
+                }
+                return price;
+            }
+
+           
 
             return price;
         }
@@ -25,12 +37,23 @@ namespace SpaceTrader
         public double Buying(double demandOfPlanet, int amount, int basePrice)
         {
             var demand = demandOfPlanet;
-            var marketSize = demand + basePrice;
+            var marketSize = demand * basePrice;
 
             //buying
-            var amountBuying = amount;
-            var price = (amountBuying) * marketSize + basePrice;
+            var price = marketSize * amount;
 
+            if (price > amount * basePrice * 2.5)
+            {
+                price = amount * basePrice * 2.5;
+                if (price > 250000.00 * amount)
+                {
+                    price = 250000.00 * amount;
+                    return price;
+                }
+
+                return price;
+            }
+           
             return price; 
         }
     }
