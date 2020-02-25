@@ -160,13 +160,6 @@ namespace SpaceTrader
             Console.WriteLine("\u2551 them. You need to play to win. But you also need to win to play.                                       \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
-           
-            
-            
-            
-            
-            
-            
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 Press C to Continue.                                                                                   \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
