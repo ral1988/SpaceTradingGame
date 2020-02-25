@@ -27,6 +27,10 @@ namespace SpaceTrader
             Console.WriteLine("\u2551 Each Star System has a planet you can land on. Each has different prices on goods so the name of the  \u2551");
             Console.WriteLine("\u2551 game is buy low, sell high!                                                                           \u2551");
             Console.WriteLine("\u2551                                                                                                       \u2551");
+            Console.WriteLine("\u2551 Also, you have to get the money before you turn 65. Otherwise you die.                                \u2551");
+            Console.WriteLine("\u2551                                                                                                       \u2551");
+            Console.WriteLine("\u2551 And don't run out of fuel. Otherwise you die.                                                         \u2551");
+            Console.WriteLine("\u2551                                                                                                       \u2551");
             Console.WriteLine("\u2551 Good luck and have fun!                                                                               \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
             Console.WriteLine("\u2551                                                                                                       \u2551");

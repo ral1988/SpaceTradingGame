@@ -18,7 +18,7 @@ namespace SpaceTrader
 
             Fuel fuel = new Fuel
             {
-                Price = 100,
+                Price = 1000,
                 Name = "Spaceship Fuel"
             };
 

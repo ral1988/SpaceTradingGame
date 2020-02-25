@@ -148,7 +148,8 @@ namespace SpaceTrader
             Console.ResetColor();
             Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
             Console.WriteLine("\u2551 You had to look down at your drink to confirm that you weren't drinking. The darkside of Ross 128 is   \u2551");
-            Console.WriteLine("\u2551 glowing. The light side looks more like a normal savanna.                                              \u2551");
+            Console.WriteLine("\u2551 glowing due to the bioluminescent forest! The light side looks more like a normal savanna.             \u2551");
+            Console.WriteLine("\u2551 One of the interesting things about being a tidally locked planet.                                     \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 You communicate with the tower to confirm your approach. They reply with,'Whoa. What's this strange    \u2551");
             Console.WriteLine("\u2551 Yankee accent coming out of your mouth?'                                                               \u2551");
@@ -159,6 +160,13 @@ namespace SpaceTrader
             Console.WriteLine("\u2551 them. You need to play to win. But you also need to win to play.                                       \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2560\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2563");
+           
+            
+            
+            
+            
+            
+            
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 Press C to Continue.                                                                                   \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
