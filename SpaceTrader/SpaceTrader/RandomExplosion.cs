@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace SpaceTrader
 {
@@ -24,6 +25,7 @@ namespace SpaceTrader
 
                         Console.Clear();
                         Console.ResetColor();
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
                         Console.WriteLine("\u2551                                                                                                        \u2551");
                         Console.WriteLine("\u2551 While passing through a High Velocity Interstellar Cloud, your ship has an unexpected collision with   \u2551");
@@ -39,6 +41,37 @@ namespace SpaceTrader
                         Console.WriteLine("\u2551 You have been obliterated. Maybe in another life.                                                      \u2551");
                         Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
                         Console.WriteLine();
+                        Console.Beep(174, 1500);
+                        Console.Beep(174, 500);
+                        Console.Beep(233, 2500);
+                        Thread.Sleep(100);
+                        Console.Beep(174, 1000);
+                        Console.Beep(233, 500);
+                        Console.Beep(293, 1500);
+                        Thread.Sleep(100);
+                        Console.Beep(174, 1000);
+                        Console.Beep(233, 500);
+                        Console.Beep(293, 1500);
+                        Thread.Sleep(100);
+                        Console.Beep(174, 1000);
+                        Console.Beep(233, 500);
+                        Console.Beep(293, 1500);
+                        Thread.Sleep(100);
+                        Console.Beep(174, 1000);
+                        Console.Beep(233, 500);
+                        Console.Beep(293, 3000);
+                        Thread.Sleep(100);
+                        Console.Beep(233, 1000);
+                        Console.Beep(293, 500);
+                        Console.Beep(349, 1500);
+                        Thread.Sleep(100);
+                        Console.Beep(293, 1000);
+                        Console.Beep(233, 500);
+                        Console.Beep(174, 2000);
+                        Thread.Sleep(100);
+                        Console.Beep(174, 1500);
+                        Console.Beep(174, 500);
+                        Console.Beep(233, 3000);
                         Console.WriteLine();
                         Console.WriteLine();
                         Environment.Exit(0);

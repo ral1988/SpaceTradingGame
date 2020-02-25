@@ -957,6 +957,8 @@ namespace SpaceTrader
 
         private static ConsoleKeyInfo TradingPostMenu()
         {
+            FlavorText.TradingPost();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("You are in the trading post. What would you like to do?");
             Console.WriteLine();
             Console.WriteLine("1. Buy Items");
