@@ -406,17 +406,15 @@ namespace SpaceTrader
                         }
                         if (input.Key == ConsoleKey.Y)
                         {
-                            for (int i = 0; i < amount; ++i)
+                            Money += price;
+
+                            fuel.SellFuel(amount);
+
+                            if (Money >= 10000000)
                             {
-                                Money += price;
-
-                                fuel.SellFuel(amount);
-
-                                if (Money >= 10000000)
-                                {
                                     VictoryScreen.Victory(ref Money);
-                                }
                             }
+                            
                             Console.Clear();
                             Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
 
@@ -957,6 +955,8 @@ namespace SpaceTrader
 
         private static ConsoleKeyInfo TradingPostMenu()
         {
+            FlavorText.TradingPost();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("You are in the trading post. What would you like to do?");
             Console.WriteLine();
             Console.WriteLine("1. Buy Items");

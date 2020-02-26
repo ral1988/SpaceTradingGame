@@ -11,14 +11,14 @@ namespace SpaceTrader
         {
             var currentPlanet = 0;
 
-            double Money = 1000.00; 
+            double Money = 1000.00;
 
             var callAge = new PlayerAge();
             callAge.age.Add(18);
 
             Fuel fuel = new Fuel
             {
-                Price = 100,
+                Price = 1000,
                 Name = "Spaceship Fuel"
             };
 

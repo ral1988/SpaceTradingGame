@@ -186,7 +186,7 @@ namespace SpaceTrader
         public double ROSS128Selling(int amount, int basePrice)
         {
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 3.50; //like earth, easy trading
+            var demandOfPlanet = 2.50; //like earth, easy trading
             var price = SupplyAndDemand.Selling(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -197,7 +197,7 @@ namespace SpaceTrader
         {
 
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 3.50; //like earth, easy trading
+            var demandOfPlanet = 2.50; //like earth, easy trading
             var price = SupplyAndDemand.Buying(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -206,7 +206,7 @@ namespace SpaceTrader
         public double LSBSelling(int amount, int basePrice)
         {
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 15.5; //somewhat far from earth
+            var demandOfPlanet = 3.5; //somewhat far from earth
             var price = SupplyAndDemand.Selling(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -217,7 +217,7 @@ namespace SpaceTrader
         {
 
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 15.5; //somewhat far from earth
+            var demandOfPlanet = 3.5; //somewhat far from earth
             var price = SupplyAndDemand.Buying(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -226,7 +226,7 @@ namespace SpaceTrader
         public double WOLF1061Selling(int amount, int basePrice)
         {
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 10.00; //somewhat far from earth
+            var demandOfPlanet = 8.00; //somewhat far from earth
             var price = SupplyAndDemand.Selling(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -237,7 +237,7 @@ namespace SpaceTrader
         {
 
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 10.00; //somewhat far from earth
+            var demandOfPlanet = 8.00; //somewhat far from earth
             var price = SupplyAndDemand.Buying(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -246,7 +246,7 @@ namespace SpaceTrader
         public double GLIESE832Selling(int amount, int basePrice)
         {
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 20.25; //lots of minerals in a hostile enviroment
+            var demandOfPlanet = 15.25; //lots of minerals in a hostile enviroment
             var price = SupplyAndDemand.Selling(demandOfPlanet, amount, basePrice);
 
             return price;
@@ -257,7 +257,7 @@ namespace SpaceTrader
         {
 
             var SupplyAndDemand = new SupplyAndDemand();
-            var demandOfPlanet = 20.25; //supplies are hard to get, far away from Earth
+            var demandOfPlanet = 15.25; //supplies are hard to get, far away from Earth
             var price = SupplyAndDemand.Buying(demandOfPlanet, amount, basePrice);
 
             return price;

@@ -148,7 +148,8 @@ namespace SpaceTrader
             Console.ResetColor();
             Console.WriteLine($"\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557");
             Console.WriteLine("\u2551 You had to look down at your drink to confirm that you weren't drinking. The darkside of Ross 128 is   \u2551");
-            Console.WriteLine("\u2551 glowing. The light side looks more like a normal savanna.                                              \u2551");
+            Console.WriteLine("\u2551 glowing due to the bioluminescent forest! The light side looks more like a normal savanna.             \u2551");
+            Console.WriteLine("\u2551 One of the interesting things about being a tidally locked planet.                                     \u2551");
             Console.WriteLine("\u2551                                                                                                        \u2551");
             Console.WriteLine("\u2551 You communicate with the tower to confirm your approach. They reply with,'Whoa. What's this strange    \u2551");
             Console.WriteLine("\u2551 Yankee accent coming out of your mouth?'                                                               \u2551");
@@ -373,6 +374,34 @@ namespace SpaceTrader
             Console.WriteLine("\u2551                                                                                            \u2551");
             Console.WriteLine("\u255A\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255D");
             Console.WriteLine();
+        }
+
+        public static void TradingPost()
+        {
+            Console.ResetColor();
+            Console.WriteLine($"                                                                                           ");
+            Console.WriteLine($"                                    \u2588 \u2588  \u2588\u2588\u2588\u2588\u2588                                                  ");
+            Console.WriteLine($"                                    \u2588\u2588\u2588  \u2588   \u2588                                               ");
+            Console.WriteLine($"                                     \u2588   \u2588\u2588\u2588\u2588\u2588                                                  ");
+            Console.WriteLine($"                                     \u2588     \u2588                                                ");
+            Console.WriteLine($"                                     \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588                                               ");
+            Console.WriteLine($"                                          \u2588\u2588\u2588    \u2588                                             ");
+            Console.WriteLine($"                                          \u2588\u2588\u2588    \u2588                                             ");
+            Console.WriteLine($"                                          \u2588\u2588\u2588    \u2588                                             ");
+            Console.WriteLine($"           \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588                                                                               ");
+            Console.WriteLine($"          \u2588                                                               \u2588 \u2588                 ");
+            Console.WriteLine($"         \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  \u2588                                                                                ");
+            Console.WriteLine($"         \u2588                                                               \u2588  \u2588                 ");
+            Console.WriteLine($"         \u2588               Trading Post: $   Food                          \u2588  \u2588                 ");
+            Console.WriteLine($"         \u2588                             $   Water                         \u2588  \u2588                 ");
+            Console.WriteLine($"         \u2588                             $$  Spare Parts                   \u2588  \u2588                 ");
+            Console.WriteLine($"         \u2588                             $$$ Electronics                   \u2588  \u2588                 ");
+            Console.WriteLine($"         \u2588                                                               \u2588 \u2588                  ");
+            Console.WriteLine($"         \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588");
+            Console.WriteLine($"                                                                                           ");
+            Console.WriteLine($"         'If he runs, he's VC. If he doesn't, he's a well disciplined VC.'            ");
+            Console.WriteLine($"               -John T. Walton, Green Beret, son of Sam Walton, Founder of Walmart.     ");
+            Console.WriteLine($"                                                                                           ");
         }
 
 
