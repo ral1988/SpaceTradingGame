@@ -71,7 +71,7 @@
 
 #### Tidally Locked, Mineral rich, mountains, hot
 
- - Average Temp: 800°F
+ - Average Temp: 800°FL
  - Surface Light: Earth Like
  - Mass: 5.2 Earths
  - Grav: 1.7 x Earth
