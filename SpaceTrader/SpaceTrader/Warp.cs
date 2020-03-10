@@ -6,7 +6,7 @@ using System.Text;
 namespace SpaceTrader
 {
 
-    class Warp
+	class Warp
 	{
 		public static double WarpCompute(double distance)   
 		{
@@ -36,7 +36,7 @@ namespace SpaceTrader
 				return timeOfTravel;
 				}
 		
-		    
+			
 		}
 
 	}
