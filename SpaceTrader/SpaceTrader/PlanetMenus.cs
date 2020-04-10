@@ -9,245 +9,217 @@ namespace SpaceTrader
     {
         public static void Menus(List<Planet> StarChart, ref int currentPlanet, ref PlayerAge callAge, OreType Titanium, OreType Gold, OreType Platinum, OreType Vibranium, InventorySystem inventory, TradingItems Food, TradingItems Water, TradingItems Textiles, TradingItems Electronics, TradingItems SpareParts, DangerousItems CompressedHydrogen, DangerousItems PoloniumFuel, IllegalItems Spice, IllegalItems Weapons, ref double Money, List<double> currentFuelTank, List<double> age, double endOfAge, SmugglerHold hold, Fuel fuel)
         {
-            PlanetSupply planetSupply = new PlanetSupply();
-            FailureScreen failureScreen = new FailureScreen();
-
-            //menu for the planet
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
-            Console.WriteLine("What would you like to do?");
-            Console.WriteLine();
-            Console.WriteLine("1. Go Mining");
-            Console.WriteLine("2. Visit Trading Post");
-            Console.WriteLine("3. Visit Fuel Depot");
-            Console.WriteLine("4. Visit the Cantina.");
-            Console.WriteLine("5. Leave Planet.");
-            Console.WriteLine();
-            Console.WriteLine("Enter a Menu Number to Proceed.");
-            var input = Console.ReadKey();
-
-            //input validation
-            while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3 && input.Key != ConsoleKey.D4 && input.Key != ConsoleKey.D5)
+            while (true)
             {
-                Console.WriteLine();
-                Console.WriteLine("Invalid input. Try Again.");
-                input = Console.ReadKey();
-            }
+                PlanetSupply planetSupply = new PlanetSupply();
+                FailureScreen failureScreen = new FailureScreen();
 
-            //menu items
-            if (input.Key == ConsoleKey.D1)
-            {
-                
-                //calls the random generator
-                Random rand = RandomGenerator.NewRand();
-
-                //runs the results method
-                OreType result = MiningResult.Results(rand, Titanium, Gold, Platinum, Vibranium);
-
-                //gets the result from MiningReturns
-                int amount = MiningReturns.Returns(result);
-
-                double timeToMine = MiningTime.TimeElapsed();
-
-                callAge.TimeCalc(timeToMine / 365.25);
-
-                new FailureScreen().Failure(ref Money, age, endOfAge);
-
-                //Displays mining result
-                Console.Clear();
-                Console.WriteLine();
-                Console.Write($"You have gone mining for {timeToMine} days and retrieved {amount} tons of {result.Name}");
-
-                for (int i = 0; i < amount; ++i)
-                {
-                    var addedItem = inventory.AddItem(result);
-
-                    if (!addedItem)
-                    {
-                        Console.Write($", but your inventory was full, so you had to throw away {amount - i} tons");
-                        break;
-                    }
-                }
-
-                Console.WriteLine(".");
-
-                Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
-
-            }
-            else if (input.Key == ConsoleKey.D2)
-            {
-                Console.Clear();
-                input = TradingPostMenu();
-                
-
-                while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Invalid Input. Try Again.");
-                    input = Console.ReadKey();
-                }
-
-                if (input.Key == ConsoleKey.D1)
-                {
-                    Console.Clear();
-                    Console.WriteLine("What do you want to buy?"); //put it into a new class
-                    Console.WriteLine();
-                    Console.WriteLine("1. Textiles");
-                    Console.WriteLine("2. Food");
-                    Console.WriteLine("3. Water");
-                    Console.WriteLine("4. Spare Parts");
-                    Console.WriteLine("5. Electronics");
-                    Console.WriteLine("6. Go Back");
-                    Console.WriteLine();
-                    Console.WriteLine("Enter a Menu Number to Proceed.");
-                    var input2 = Console.ReadKey();
-
-                    while (input2.Key != ConsoleKey.D1 && input2.Key != ConsoleKey.D2 && input2.Key != ConsoleKey.D3 && input2.Key != ConsoleKey.D4 && input2.Key != ConsoleKey.D5 && input2.Key != ConsoleKey.D6)
-                    {
-                        Console.WriteLine();
-                        Console.WriteLine("Invalid Input. Try Again.");
-                        input2 = Console.ReadKey();
-                    }
-
-                    if (input2.Key == ConsoleKey.D1)
-                    {
-                        input = BuyTextiles(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
-
-                    }
-                    else if (input2.Key == ConsoleKey.D2)
-                    {
-                        input = BuyFood(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
-
-                    }
-                    else if (input2.Key == ConsoleKey.D3)
-                    {
-                        input = BuyWater(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
-
-                    }
-                    else if (input2.Key == ConsoleKey.D4)
-                    {
-                        input = BuySpareParts(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
-
-                    }
-                    else if (input2.Key == ConsoleKey.D5)
-                    {
-                        input = BuyElectronics(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
-
-                    }
-                    
-                    else
-                    {
-                        Console.WriteLine();
-                        Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
-
-                    }
-
-                }
-                else if (input.Key == ConsoleKey.D2)
-                {
-                    
-                    Console.Clear();
-                    Console.WriteLine();
-                    Console.WriteLine("What would you like to sell?");
-                    
-                    for (int i = 0; i < inventory.Items.Count; ++i)
-                    {
-                        Console.WriteLine($"{i + 1}. {(inventory.Items[i]).Name} ");
-                    }
-
-                    Console.WriteLine("Enter the desired inventory slot or enter A for ALL.");
-                    var slot = Console.ReadLine();
-
-                    int output;
-                    
-                    if (slot == "a")
-                    {
-                        // Sells all
-                        input = SellAll(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank,age, endOfAge, hold, planetSupply, fuel);
-                    }
-                    else
-                    {
-                        while (!Int32.TryParse(slot, out output))
-                        {
-                            Console.WriteLine("Invalid input. Try again.");
-                        }
-                        int amount = 1;
-                        int baseprice = (inventory.Items[output - 1]).Price;
-                        double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
-                        Console.WriteLine();
-                        Console.WriteLine($"Would you like to sell selected item for $\u03B2 {String.Format("{0:0,0.00}", price)}?");
-
-                        Console.WriteLine("Y or N?");
-                        input = Console.ReadKey();
-                        while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
-                        {
-                            Console.WriteLine();
-                            Console.WriteLine("Invalid Input. Try Again.");
-                            input = Console.ReadKey();
-                        }
-                        if (input.Key == ConsoleKey.Y)
-                        {
-                            for (int i = 0; i < amount; ++i)
-                            {
-                                Money += price;
-
-                                inventory.RemoveItem(output, inventory);
-
-                                if (Money >= 10000000)
-                                {
-                                    VictoryScreen.Victory(ref Money);
-                                }
-                            }
-                            
-                        }
-                    }
-                    Console.Clear();
-                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
-
-                }
-                else
-                {
-                    Console.Clear();
-                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
-
-                }
-
-            }
-            else if (input.Key == ConsoleKey.D3)
-            {
-                Console.Clear();
-                FlavorText.FuelDepot();
+                //menu for the planet
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Welcome to the Fuel Depot!");
+                Console.WriteLine($"You are on the surface of {StarChart[currentPlanet].Name}");
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine();
-                Console.WriteLine("1. Buy Items");
-                Console.WriteLine("2. Sell Items");
-                Console.WriteLine("3. Go Back");
+                Console.WriteLine("1. Go Mining");
+                Console.WriteLine("2. Visit Trading Post");
+                Console.WriteLine("3. Visit Fuel Depot");
+                Console.WriteLine("4. Visit the Cantina.");
+                Console.WriteLine("5. Leave Planet.");
+                Console.WriteLine();
+                Console.WriteLine("Enter a Menu Number to Proceed.");
+                var input = Console.ReadKey();
 
-                input = Console.ReadKey();
-
-                while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3)
+                //input validation
+                while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3 && input.Key != ConsoleKey.D4 && input.Key != ConsoleKey.D5)
                 {
                     Console.WriteLine();
                     Console.WriteLine("Invalid input. Try Again.");
                     input = Console.ReadKey();
                 }
 
+                //menu items
                 if (input.Key == ConsoleKey.D1)
                 {
+                    //calls the random generator
+                    Random rand = RandomGenerator.NewRand();
+
+                    //runs the results method
+                    OreType result = MiningResult.Results(rand, Titanium, Gold, Platinum, Vibranium);
+
+                    //gets the result from MiningReturns
+                    int amount = MiningReturns.Returns(result);
+
+                    double timeToMine = MiningTime.TimeElapsed();
+
+                    callAge.TimeCalc(timeToMine / 365.25);
+
+                    new FailureScreen().Failure(ref Money, age, endOfAge);
+
+                    //Displays mining result
                     Console.Clear();
-                    Console.WriteLine("What would you like to buy?");
                     Console.WriteLine();
-                    Console.WriteLine("1. Spaceship Fuel");
-                    Console.WriteLine("2. Compressed Hydrogen");
-                    Console.WriteLine("3. Polonium Fuel Rods");
-                    Console.WriteLine("4. Go Back");
+                    Console.Write($"You have gone mining for {timeToMine} days and retrieved {amount} tons of {result.Name}");
+
+                    for (int i = 0; i < amount; ++i)
+                    {
+                        var addedItem = inventory.AddItem(result);
+
+                        if (!addedItem)
+                        {
+                            Console.Write($", but your inventory was full, so you had to throw away {amount - i} tons");
+                            break;
+                        }
+                    }
+
+                    Console.WriteLine(".");
+
+                    continue;
+                }
+                if (input.Key == ConsoleKey.D2)
+                {
+                    Console.Clear();
+                    input = TradingPostMenu();
+
+
+                    while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Invalid Input. Try Again.");
+                        input = Console.ReadKey();
+                    }
+
+                    if (input.Key == ConsoleKey.D1)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("What do you want to buy?"); //put it into a new class
+                        Console.WriteLine();
+                        Console.WriteLine("1. Textiles");
+                        Console.WriteLine("2. Food");
+                        Console.WriteLine("3. Water");
+                        Console.WriteLine("4. Spare Parts");
+                        Console.WriteLine("5. Electronics");
+                        Console.WriteLine("6. Go Back");
+                        Console.WriteLine();
+                        Console.WriteLine("Enter a Menu Number to Proceed.");
+                        var input2 = Console.ReadKey();
+
+                        while (input2.Key != ConsoleKey.D1 && input2.Key != ConsoleKey.D2 && input2.Key != ConsoleKey.D3 && input2.Key != ConsoleKey.D4 && input2.Key != ConsoleKey.D5 && input2.Key != ConsoleKey.D6)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("Invalid Input. Try Again.");
+                            input2 = Console.ReadKey();
+                        }
+
+                        if (input2.Key == ConsoleKey.D1)
+                        {
+                            input = BuyTextiles(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
+                        }
+                        else if (input2.Key == ConsoleKey.D2)
+                        {
+                            input = BuyFood(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
+                        }
+                        else if (input2.Key == ConsoleKey.D3)
+                        {
+                            input = BuyWater(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
+                        }
+                        else if (input2.Key == ConsoleKey.D4)
+                        {
+                            input = BuySpareParts(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
+                        }
+                        else if (input2.Key == ConsoleKey.D5)
+                        {
+                            input = BuyElectronics(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
+                        }
+
+                        else
+                        {
+                            Console.WriteLine();
+                            Console.Clear();
+                            continue;
+                        }
+                    }
+                    else if (input.Key == ConsoleKey.D2)
+                    {
+                        Console.Clear();
+                        Console.WriteLine();
+                        Console.WriteLine("What would you like to sell?");
+
+                        for (int i = 0; i < inventory.Items.Count; ++i)
+                        {
+                            Console.WriteLine($"{i + 1}. {(inventory.Items[i]).Name} ");
+                        }
+
+                        Console.WriteLine("Enter the desired inventory slot or enter A for ALL.");
+                        var slot = Console.ReadLine();
+
+                        int output;
+
+                        if (slot == "a")
+                        {
+                            // Sells all
+                            input = SellAll(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
+                        }
+                        else
+                        {
+                            while (!Int32.TryParse(slot, out output))
+                            {
+                                Console.WriteLine("Invalid input. Try again.");
+                            }
+
+                            int amount = 1;
+                            int baseprice = (inventory.Items[output - 1]).Price;
+                            double price = Math.Abs(planetSupply.PlanetSellingSelection(ref currentPlanet, baseprice, amount));
+                            Console.WriteLine();
+                            Console.WriteLine($"Would you like to sell selected item for $\u03B2 {String.Format("{0:0,0.00}", price)}?");
+
+                            Console.WriteLine("Y or N?");
+                            input = Console.ReadKey();
+                            while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Invalid Input. Try Again.");
+                                input = Console.ReadKey();
+                            }
+
+                            if (input.Key == ConsoleKey.Y)
+                            {
+                                for (int i = 0; i < amount; ++i)
+                                {
+                                    Money += price;
+
+                                    inventory.RemoveItem(output, inventory);
+
+                                    if (Money >= 10000000)
+                                    {
+                                        VictoryScreen.Victory(ref Money);
+                                    }
+                                }
+                            }
+                        }
+
+                        Console.Clear();
+                        continue;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        continue;
+                    }
+                }
+                else if (input.Key == ConsoleKey.D3)
+                {
+                    Console.Clear();
+                    FlavorText.FuelDepot();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Welcome to the Fuel Depot!");
+                    Console.WriteLine("What would you like to do?");
+                    Console.WriteLine();
+                    Console.WriteLine("1. Buy Items");
+                    Console.WriteLine("2. Sell Items");
+                    Console.WriteLine("3. Go Back");
 
                     input = Console.ReadKey();
 
-                    while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3 && input.Key != ConsoleKey.D4)
+                    while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3)
                     {
                         Console.WriteLine();
                         Console.WriteLine("Invalid input. Try Again.");
@@ -256,200 +228,215 @@ namespace SpaceTrader
 
                     if (input.Key == ConsoleKey.D1)
                     {
-                        Console.WriteLine($"You have {String.Format("{0:0,0.00}", currentFuelTank.Sum())}/100.00. How many units of fuel would you like to buy?");
-
-                        string fuelamount = Console.ReadLine();
-                        int amount;
-                        while (!int.TryParse(fuelamount, out amount))
-                        {
-                            Console.WriteLine("Invalid Input. Try again.");
-                            fuelamount = Console.ReadLine();
-
-                        }
-                        
-                        double buyfuel = Convert.ToDouble(amount);
-                        var baseprice = fuel.Price;
-                        var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
-
-                        Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
-                        Console.WriteLine("Y or N?");
-                        input = Console.ReadKey();
-                        while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
-                        {
-                            Console.WriteLine();
-                            Console.WriteLine("Invalid Input. Try Again.");
-                            input = Console.ReadKey();
-                        }
-                        if (input.Key == ConsoleKey.Y)
-                        {
-                            fuel.AddFuel(buyfuel);
-                            Money -= price;
-                            if (Money < 0)
-                            {
-                                //Failure screen
-                                new FailureScreen().Failure(ref Money, age, endOfAge);
-
-                            }
-                        }
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
-
-
-                    }
-                    else if (input.Key == ConsoleKey.D2)
-                    {
+                        Console.WriteLine("What would you like to buy?");
                         Console.WriteLine();
-                        int amount = AmountCalc(inventory);
+                        Console.WriteLine("1. Spaceship Fuel");
+                        Console.WriteLine("2. Compressed Hydrogen");
+                        Console.WriteLine("3. Polonium Fuel Rods");
+                        Console.WriteLine("4. Go Back");
 
-                        var baseprice = CompressedHydrogen.Price;
-                        var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
-
-                        Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
-                        Console.WriteLine("Y or N?");
                         input = Console.ReadKey();
-                        while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
+
+                        while (input.Key != ConsoleKey.D1 && input.Key != ConsoleKey.D2 && input.Key != ConsoleKey.D3 && input.Key != ConsoleKey.D4)
                         {
                             Console.WriteLine();
-                            Console.WriteLine("Invalid Input. Try Again.");
+                            Console.WriteLine("Invalid input. Try Again.");
                             input = Console.ReadKey();
                         }
-                        if (input.Key == ConsoleKey.Y)
+
+                        if (input.Key == ConsoleKey.D1)
                         {
-                            for (int i = 0; i < amount; ++i)
+                            Console.WriteLine($"You have {String.Format("{0:0,0.00}", currentFuelTank.Sum())}/100.00. How many units of fuel would you like to buy?");
+
+                            string fuelamount = Console.ReadLine();
+                            int amount;
+                            while (!int.TryParse(fuelamount, out amount))
                             {
-                                inventory.AddItem(CompressedHydrogen);
+                                Console.WriteLine("Invalid Input. Try again.");
+                                fuelamount = Console.ReadLine();
                             }
-                            Money -= price;
-                            if (Money < 0)
-                            {
-                                //Failure screen
-                                new FailureScreen().Failure(ref Money, age, endOfAge);
 
-                            }
-                        }
-                        Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
+                            double buyfuel = Convert.ToDouble(amount);
+                            var baseprice = fuel.Price;
+                            var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
 
-                    }
-                    else if (input.Key == ConsoleKey.D3)
-                    {
-                        Console.WriteLine();
-                        int amount = AmountCalc(inventory);
-
-                        var baseprice = PoloniumFuel.Price;
-                        var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
-
-                        Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
-                        Console.WriteLine("Y or N?");
-                        input = Console.ReadKey();
-                        while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
-                        {
-                            Console.WriteLine();
-                            Console.WriteLine("Invalid Input. Try Again.");
+                            Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+                            Console.WriteLine("Y or N?");
                             input = Console.ReadKey();
-                        }
-                        if (input.Key == ConsoleKey.Y)
-                        {
-                            for (int i = 0; i < amount; ++i)
+                            while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
                             {
-                                inventory.AddItem(PoloniumFuel);
+                                Console.WriteLine();
+                                Console.WriteLine("Invalid Input. Try Again.");
+                                input = Console.ReadKey();
                             }
-                            Money -= price;
-                            if (Money < 0)
+
+                            if (input.Key == ConsoleKey.Y)
                             {
-                                //Failure screen
-                                new FailureScreen().Failure(ref Money, age, endOfAge);
-
+                                fuel.AddFuel(buyfuel);
+                                Money -= price;
+                                if (Money < 0)
+                                {
+                                    //Failure screen
+                                    new FailureScreen().Failure(ref Money, age, endOfAge);
+                                }
                             }
-                        }
-                        Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
 
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
-
-                    }
-
-                }
-                else if (input.Key == ConsoleKey.D2)
-                {
-
-                    Console.Clear();
-                    Console.WriteLine("How much fuel would you like to sell?");
-                    Console.WriteLine();
-                    Console.WriteLine("Enter a whole number.");
-                    string inputs = Console.ReadLine();
-                    int outputs;
-                    while (!int.TryParse(inputs, out outputs))
-                    {
-                        Console.WriteLine("Invalid input. Try again.");
-                        inputs = Console.ReadLine();
-                    }
-
-                    if (outputs <= currentFuelTank.Sum())
-                    {
-                        int amount = outputs;
-                        var baseprice = fuel.Price;
-                        var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
-
-                        Console.WriteLine($"Are you sure you want to sell {amount} units of Fuel for {price}?");
-                        Console.WriteLine("Y or N?");
-                        input = Console.ReadKey();
-                        while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
-                        {
-                            Console.WriteLine();
-                            Console.WriteLine("Invalid Input. Try Again.");
-                            input = Console.ReadKey();
-                        }
-                        if (input.Key == ConsoleKey.Y)
-                        {
-                            Money += price;
-
-                            fuel.SellFuel(amount);
-
-                            if (Money >= 10000000)
-                            {
-                                    VictoryScreen.Victory(ref Money);
-                            }
-                            
                             Console.Clear();
-                            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
+                            continue;
+                        }
+                        else if (input.Key == ConsoleKey.D2)
+                        {
+                            Console.WriteLine();
+                            int amount = AmountCalc(inventory);
 
+                            var baseprice = CompressedHydrogen.Price;
+                            var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
+
+                            Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+                            Console.WriteLine("Y or N?");
+                            input = Console.ReadKey();
+                            while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Invalid Input. Try Again.");
+                                input = Console.ReadKey();
+                            }
+
+                            if (input.Key == ConsoleKey.Y)
+                            {
+                                for (int i = 0; i < amount; ++i)
+                                {
+                                    inventory.AddItem(CompressedHydrogen);
+                                }
+
+                                Money -= price;
+                                if (Money < 0)
+                                {
+                                    //Failure screen
+                                    new FailureScreen().Failure(ref Money, age, endOfAge);
+                                }
+                            }
+
+                            Console.Clear();
+                            continue;
+                        }
+                        else if (input.Key == ConsoleKey.D3)
+                        {
+                            Console.WriteLine();
+                            int amount = AmountCalc(inventory);
+
+                            var baseprice = PoloniumFuel.Price;
+                            var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
+
+                            Console.WriteLine($"This will cost $\u03B2{String.Format("{0:0,0.00}", price)}. You have $\u03B2 {String.Format("{0:0,0.00}", Money)} Would you like to Continue?");
+                            Console.WriteLine("Y or N?");
+                            input = Console.ReadKey();
+                            while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Invalid Input. Try Again.");
+                                input = Console.ReadKey();
+                            }
+
+                            if (input.Key == ConsoleKey.Y)
+                            {
+                                for (int i = 0; i < amount; ++i)
+                                {
+                                    inventory.AddItem(PoloniumFuel);
+                                }
+
+                                Money -= price;
+                                if (Money < 0)
+                                {
+                                    //Failure screen
+                                    new FailureScreen().Failure(ref Money, age, endOfAge);
+                                }
+                            }
+
+                            Console.Clear();
+                            continue;
                         }
                         else
                         {
                             Console.Clear();
-                            Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
-
+                            continue;
+                        }
+                    }
+                    else if (input.Key == ConsoleKey.D2)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("How much fuel would you like to sell?");
+                        Console.WriteLine();
+                        Console.WriteLine("Enter a whole number.");
+                        string inputs = Console.ReadLine();
+                        int outputs;
+                        while (!int.TryParse(inputs, out outputs))
+                        {
+                            Console.WriteLine("Invalid input. Try again.");
+                            inputs = Console.ReadLine();
                         }
 
+                        if (outputs <= currentFuelTank.Sum())
+                        {
+                            int amount = outputs;
+                            var baseprice = fuel.Price;
+                            var price = planetSupply.PlanetPurchaseSelection(ref currentPlanet, baseprice, amount);
+
+                            Console.WriteLine($"Are you sure you want to sell {amount} units of Fuel for {price}?");
+                            Console.WriteLine("Y or N?");
+                            input = Console.ReadKey();
+                            while (input.Key != ConsoleKey.Y && input.Key != ConsoleKey.N)
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Invalid Input. Try Again.");
+                                input = Console.ReadKey();
+                            }
+
+                            if (input.Key == ConsoleKey.Y)
+                            {
+                                Money += price;
+
+                                fuel.SellFuel(amount);
+
+                                if (Money >= 10000000)
+                                {
+                                    VictoryScreen.Victory(ref Money);
+                                }
+
+                                Console.Clear();
+                                continue;
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            continue;
+                        }
                     }
                     else
                     {
                         Console.Clear();
-                        Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
+                        continue;
                     }
                 }
-                else
+                else if (input.Key == ConsoleKey.D4)
                 {
                     Console.Clear();
-                    Menus(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
-
+                    input = CantinaOptions(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
+                }
+                else if (input.Key == ConsoleKey.D5)
+                {
+                    Console.Clear();
+                    new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
                 }
 
-            }
-            else if (input.Key == ConsoleKey.D4)
-            {
-                Console.Clear();
-                input = CantinaOptions(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, planetSupply, fuel);
-            }
-            else if (input.Key == ConsoleKey.D5)
-            {
-                Console.Clear();
-                new SpaceTrader.MapAndTravel().DisplayMap(StarChart, ref currentPlanet, ref callAge, Titanium, Gold, Platinum, Vibranium, inventory, Food, Water, Textiles, Electronics, SpareParts, CompressedHydrogen, PoloniumFuel, Spice, Weapons, ref Money, currentFuelTank, age, endOfAge, hold, fuel);
+                break;
             }
         }
 
